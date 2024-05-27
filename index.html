@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
     <script src="assets/js/lib/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/lib/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/lib/TweenMax.min.js"></script>
     <script src="assets/js/lib/swiper.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/ui.js"></script>
@@ -87,7 +89,6 @@
                     </li>
                 </ul>
             </div><!-- gnbGroup END -->
-           
             <div class="btnSitemapOpen">
                 <button type="button"><span></span></button>
             </div>
@@ -170,182 +171,228 @@
         </div><!-- sitemapWrap END -->
 
         <div id="main">
-            <div id="fullpage">
-                <section class="section section01" data-page="1">
-                    <div class="visualWrap">
-                        <div class="visualSwiper swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide" data-swiper-autoplay="5000">
-                                    <div class="visualBg">
-                                        <img src="assets/images/img_visual01.jpg" alt="" class="tabletHide">
-                                        <img src="assets/images/img_visual01_m.jpg" alt="" class="tabletShow">
-                                    </div>
-                                    <div class="visualText">
-                                        <p>KFCPA</p>
-                                        <p class="text_delay01">안전한 금융거래와 건강한 사회,</p>
-                                        <p class="text_delay02">한국금융범죄예방협회가 함께하겠습니다.</p>
-                                    </div>
+            <section class="section section01">
+                <div class="visualWrap">
+                    <div class="visualSwiper swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-swiper-autoplay="5000">
+                                <div class="visualBg">
+                                    <img src="assets/images/img_visual01.jpg" alt="" class="tabletHide">
+                                    <img src="assets/images/img_visual01_m.jpg" alt="" class="tabletShow">
                                 </div>
-                                <div class="swiper-slide" data-swiper-autoplay="5000">
-                                    <div class="visualBg">
-                                        <img src="assets/images/img_visual02.jpg" alt="" class="tabletHide">
-                                        <img src="assets/images/img_visual02_m.jpg" alt="" class="tabletShow">
-                                    </div>
-                                    <div class="visualText">
-                                        <p>KFCPA</p>
-                                        <p class="text_delay01">안전한 금융거래와 건강한 사회,</p>
-                                        <p class="text_delay02">한국금융범죄예방협회가 함께하겠습니다.</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide" data-swiper-autoplay="5000">
-                                    <div class="visualBg">
-                                        <img src="assets/images/img_visual03.jpg" alt="" class="tabletHide">
-                                        <img src="assets/images/img_visual03_m.jpg" alt="" class="tabletShow">
-                                    </div>
-                                    <div class="visualText">
-                                        <p>KFCPA</p>
-                                        <p class="text_delay01">안전한 금융거래와 건강한 사회,</p>
-                                        <p class="text_delay02">한국금융범죄예방협회가 함께하겠습니다.</p>
-                                    </div>
+                                <div class="visualText">
+                                    <p>KFCPA</p>
+                                    <p class="text_delay01">안전한 금융거래와 건강한 사회,</p>
+                                    <p class="text_delay02">한국금융범죄예방협회가 함께하겠습니다.</p>
                                 </div>
                             </div>
-                        </div><!-- visualSwiper END -->
-                        <div class="visualControl">
-                            <div class="pagination"></div>
+                            <div class="swiper-slide" data-swiper-autoplay="5000">
+                                <div class="visualBg">
+                                    <img src="assets/images/img_visual02.jpg" alt="" class="tabletHide">
+                                    <img src="assets/images/img_visual02_m.jpg" alt="" class="tabletShow">
+                                </div>
+                                <div class="visualText">
+                                    <p>KFCPA</p>
+                                    <p class="text_delay01">안전한 금융거래와 건강한 사회,</p>
+                                    <p class="text_delay02">한국금융범죄예방협회가 함께하겠습니다.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-swiper-autoplay="5000">
+                                <div class="visualBg">
+                                    <img src="assets/images/img_visual03.jpg" alt="" class="tabletHide">
+                                    <img src="assets/images/img_visual03_m.jpg" alt="" class="tabletShow">
+                                </div>
+                                <div class="visualText">
+                                    <p>KFCPA</p>
+                                    <p class="text_delay01">안전한 금융거래와 건강한 사회,</p>
+                                    <p class="text_delay02">한국금융범죄예방협회가 함께하겠습니다.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div><!-- visualWrap END -->
-                    <div class="scrollDown">
-                        <p>Scroll Down</p>
-                        <i><span class="blind">스크롤아이콘</span></i>
+                    </div><!-- visualSwiper END -->
+                    <div class="visualControl">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="pagination"></div>
                     </div>
-                </section><!-- section01 END -->
+                </div><!-- visualWrap END -->
+                <div class="scrollDown">
+                    <p>Scroll Down</p>
+                    <i><span class="blind">스크롤아이콘</span></i>
+                </div>
+            </section><!-- section01 END -->
 
-                <section class="section section02" data-page="2">
-                    <div class="serviceText">
-                        <p class="titleSm" data-aos="fade-right">SERVICE</p>
-                        <p class="titleLg" data-aos="fade-right" data-aos-delay="200">
-                            SJ1<br />
-                            서비스 안내
-                        </p>
-                        <p class="textMd" data-aos="fade-right" data-aos-delay="400">
-                            책임감을 가지고 장례행사를 진행하므로<br class ="mobileShow"/> 고인과 유가족들의 <br class ="mobileHide"/>
-                            만족도가 높은 믿을 수 있는 <br class ="mobileShow"/><span class="strong_txt1 fb700">고품격 장례토탈 서비스!</span><br />
-                            처음부터 끝까지 정성껏 돌봐드려 깊이 있는<br class ="mobileShow"/> 고품격 상조서비스를 <br class ="mobileHide"/>
-                            제공드립니다. 
-                        </p>
-                        <ul class="serviceLink" data-aos="fade-right" data-aos-delay="600">
-                            <li data-aos="fade-left">
-                                <img src="assets/images/img_service_btn01.png" class="mobileHide" alt="">
-                                <img src="assets/images/img_service_btn01_m.png" class="mobileShow" alt="">
-                                <p>후불상조서비스</p>
-                            </li>
-                            <li data-aos="fade-left">
-                                <img src="assets/images/img_service_btn02.png" class="mobileHide" alt="">
-                                <img src="assets/images/img_service_btn02_m.png" class="mobileShow" alt="">
-                                <p>장례토탈서비스</p>
-                            </li>
+            <section class="section section02">
+                <div class="titleGroup">
+                    <p class="titleSm" data-aos="fade-right">Introduction Association</p>
+                    <p class="titleLg" data-aos="fade-right" data-aos-delay="200">협회<b>소개</b></p>
+                </div>
+                <div class="serviceText">
+                    <p class="titleSm" data-aos="fade-right">SERVICE</p>
+                    <p class="titleLg" data-aos="fade-right" data-aos-delay="200"></p>
+                    <p class="textMd" data-aos="fade-right" data-aos-delay="400">
+                        책임감을 가지고 장례행사를 진행하므로<br class ="mobileShow"/> 고인과 유가족들의 <br class ="mobileHide"/>
+                        만족도가 높은 믿을 수 있는 <br class ="mobileShow"/><span class="strong_txt1 fb700">고품격 장례토탈 서비스!</span><br />
+                        처음부터 끝까지 정성껏 돌봐드려 깊이 있는<br class ="mobileShow"/> 고품격 상조서비스를 <br class ="mobileHide"/>
+                        제공드립니다. 
+                    </p>
+                    <ul class="serviceLink" data-aos="fade-right" data-aos-delay="600">
+                        <li data-aos="fade-left">
+                            <img src="assets/images/img_service_btn01.png" class="mobileHide" alt="">
+                            <img src="assets/images/img_service_btn01_m.png" class="mobileShow" alt="">
+                            <p>후불상조서비스</p>
+                        </li>
+                        <li data-aos="fade-left">
+                            <img src="assets/images/img_service_btn02.png" class="mobileHide" alt="">
+                            <img src="assets/images/img_service_btn02_m.png" class="mobileShow" alt="">
+                            <p>장례토탈서비스</p>
+                        </li>
+                    </ul>
+                </div><!-- serviceText END -->
+                <ul class="serviceImg" data-aos="fade-left">
+                    <li>
+                        <figure><img src="assets/images/img_service_bg01.jpg" alt=""></figure>
+                        <div class="serviceInfo" data-aos="fade-left">
+                            <p>
+                                <b>후불상조서비스</b>
+                                SJ1 상조가 유족분들과 함께하겠습니다.
+                            </p>
+                            <a href="page/notMortuary.html">바로가기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <figure><img src="assets/images/img_service_bg02.jpg" alt=""></figure>
+                        <div class="serviceInfo" data-aos="fade-left">
+                            <p>
+                                <b>장례토탈서비스</b>
+                                SJ1 상조가 유족분들과 함께하겠습니다.
+                            </p>
+                            <a href="page/restoration.html">바로가기</a>
+                        </div>
+                    </li>
+                </ul>
+            </section><!-- section02 END -->
+
+            <section class="section section03">
+                <div class="inner">
+                    <div class="thumbControl">
+                        <div class="titleGroup">
+                            <p class="titleSm" data-aos="fade-up">Major Activities</p>
+                            <p class="titleLg" data-aos="fade-up" data-aos-delay="100">협회<b>주요활동</b></p>
+                        </div>
+                        <ul class="thumbBtnGroup">
+                            <li class="on" data-aos="fade-right">전체</li>
+                            <li data-aos="fade-right" data-aos-delay="200">협회주요업무</li>
+                            <li data-aos="fade-right" data-aos-delay="300">세미나/포럼</li>
+                            <li data-aos="fade-right" data-aos-delay="400">교육활동</li>
                         </ul>
-                    </div><!-- serviceText END -->
-                    <ul class="serviceImg" data-aos="fade-left">
+                    </div>
+                    <ul class="thumbListGroup">
                         <li>
-                            <figure><img src="assets/images/img_service_bg01.jpg" alt=""></figure>
-                            <div class="serviceInfo" data-aos="fade-left">
-                                <p>
-                                    <b>후불상조서비스</b>
-                                    SJ1 상조가 유족분들과 함께하겠습니다.
-                                </p>
-                                <a href="page/notMortuary.html">바로가기</a>
+                            <div class="thumbList" data-aos="fade-up">
+                                <img src="http://via.placeholder.com/300x2000" alt="">
+                                <ul>
+                                    <li>
+                                        <div class="text">
+                                            <p class="label">세미나/포럼</p>
+                                            <p class="date">2024-05-24</p>
+                                            <p class="title">KFCPA 한국금융범죄예방협회 2024년 제 2회 포럼이 개최되었습니다.</p>
+                                            <p class="button">자세히 보기</p>
+                                        </div>
+                                        <div class="img">
+                                            <img src="" alt="">
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
                         <li>
-                            <figure><img src="assets/images/img_service_bg02.jpg" alt=""></figure>
-                            <div class="serviceInfo" data-aos="fade-left">
-                                <p>
-                                    <b>장례토탈서비스</b>
-                                    SJ1 상조가 유족분들과 함께하겠습니다.
-                                </p>
-                                <a href="page/restoration.html">바로가기</a>
+                            <div class="thumbList" data-aos="fade-up">
+                                22
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbList" data-aos="fade-up">
+                                33
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbList" data-aos="fade-up">
+                                44
                             </div>
                         </li>
                     </ul>
-                </section><!-- section02 END -->
+                </div>
+            </section><!-- section03 END -->
 
-                <section class="section section03" data-page="3">
-                    <div class="inner">
-                        <p class="titleSm" data-aos="fade-up">INTRO</p>
-                        <p class="titleLg" data-aos="fade-up" data-aos-delay="200">고객을 위한<br class ="mobileShow"/> 제일 좋은 상조기업</p>
-                        <p class="textMd" data-aos="fade-up" data-aos-delay="400">
-                            업계 최고 수준의 인력 보유,<br class ="mobileShow"/> 장례의 토탈 케어 서비스를 통해<br />
-                            고객님께 새로운 가치를 드리겠습니다.
-                        </p>
-                        <div class="btnGroup">
-                            <ul>
-                                <li data-aos="fade-right" data-aos-delay="600"><a href="page/specialcompany.html">회사 소개</a></li>
-                                <li data-aos="fade-left" data-aos-delay="600"><a href="page/ceo.html">대표 소개</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section><!-- section03 END -->
-
-                <section class="section section04" data-page="4">
-                    <div class="contactText">
-                        <p class="titleSm" data-aos="fade-right">CONTACT</p>
-                        <p class="titleLg" data-aos="fade-right" data-aos-delay="200">오시는 길</p>
-                        <p class="textMd" data-aos="fade-right" data-aos-delay="400">
-                            SJ1 Service의 회사 위치와 정보를<br />
-                            빠르고 정확하게 알려 드립니다.
-                        </p>
-                        <ul class="contactInfo">
-                            <li data-aos="fade-right" data-aos-delay="600">
-                                <strong>Address</strong>
-                                <p>서울시 종로구 창경궁로147-1</p>
-                            </li>
-                            <li data-aos="fade-right" data-aos-delay="700">
-                                <strong>Tel</strong>
-                                <p>02-747-9990</p>
-                            </li>
-                            <li data-aos="fade-right" data-aos-delay="800">
-                                <strong>Fax</strong>
-                                <p>02-3443-9431</p>
-                            </li>
-                        </ul>
-                    </div><!-- contactText END -->
-                    <div class="contactMap">
-                        <!-- * 카카오맵 - 지도퍼가기 -->
-                        <!-- 1. 지도 노드 -->
-                        <div id="daumRoughmapContainer1712888467714" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%;"></div>
-
-                        <!--
-                            2. 설치 스크립트
-                            * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-                        -->
-                        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-                        <!-- 3. 실행 스크립트 -->
-                        <script charset="UTF-8">
-                            new daum.roughmap.Lander({
-                                "timestamp" : "1712888467714",
-                                "key" : "2iwpm",
-                                "mapWidth" : "auto",
-                                "mapHeight" : "1000"
-                            }).render();
-                        </script>
-                    </div>
-                </section><!-- section04 END -->
-
-                <div id="footer" class="section fp-auto-height">
-                    <div class="footerLogo">
-                        <a href="index.html" title="메인페이지로"><img src="assets/images/footer_logo.svg" alt="SJ1 SERVICE 세상에서 서비스 제일 상조"></a>
-                    </div>
-                    <ul class="footerInfo">
-                        <li><span>주소 :</span> 서울시 종로구 창경궁로147-1</li>
-                        <li><span>TEL :</span> 02-747-9990</li>
-                        <li><span>FAX :</span> 02-3443-9431</li>
+            <section class="section section04">
+                <div class="contactText">
+                    <p class="titleSm" data-aos="fade-right">CONTACT</p>
+                    <p class="titleLg" data-aos="fade-right" data-aos-delay="200">오시는 길</p>
+                    <p class="textMd" data-aos="fade-right" data-aos-delay="400">
+                        SJ1 Service의 회사 위치와 정보를<br />
+                        빠르고 정확하게 알려 드립니다.
+                    </p>
+                    <ul class="contactInfo">
+                        <li data-aos="fade-right" data-aos-delay="600">
+                            <strong>Address</strong>
+                            <p>서울시 종로구 창경궁로147-1</p>
+                        </li>
+                        <li data-aos="fade-right" data-aos-delay="700">
+                            <strong>Tel</strong>
+                            <p>02-747-9990</p>
+                        </li>
+                        <li data-aos="fade-right" data-aos-delay="800">
+                            <strong>Fax</strong>
+                            <p>02-3443-9431</p>
+                        </li>
                     </ul>
-                    <p class="footerCopy">COPYRIGHT © <span>2024 SJ1 SERVICE.</span> ALL RIGHTS RESERVED.</p>
-                </div><!-- footer END -->
-            </div><!-- fullpage END -->
+                </div><!-- contactText END -->
+                <div class="contactMap">
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1712888467714" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%;"></div>
+
+                    <!--
+                        2. 설치 스크립트
+                        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                    -->
+                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1712888467714",
+                            "key" : "2iwpm",
+                            "mapWidth" : "auto",
+                            "mapHeight" : "1000"
+                        }).render();
+                    </script>
+                </div>
+            </section><!-- section04 END -->
         </div><!-- main END -->
+
+        <footer id="footer">
+            <div class="footerInner">
+                <div class="footerLogo">
+                    <a href="index.html" title="메인페이지로"><img src="assets/images/logo_blue.svg" alt="KFCPA 한국금융범죄예방협회"></a>
+                </div>
+                <div class="footerWrap">
+                    <ul class="footerMenu">
+                        <li><a href="#">개인정보보호방침</a></li>
+                        <li><a href="#">협회소개</a></li>
+                        <li><a href="#">찾아오시는 길</a></li>
+                    </ul>
+                    <ul class="footerInfo">
+                        <li><span>주소 :</span> 서울시 종로구 종로1, 교보생명빌딩 15층 한국금융범죄예방협회(00000)</li>
+                        <li><span>Tel :</span> 02-111-1111</li>
+                        <li><span>Mobile :</span> 010-1111-1111</li>
+                        <li><span>E-Mail :</span> kfcpa@kfcpa.or.kr</li>
+                    </ul>
+                    <p class="footerCopy">COPYRIGHT © <span>2024 KFCPA.</span> ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </footer><!-- footer END -->
 
         <button type="button" id="btnTop">상단으로</button>
     </div><!-- wrap END -->

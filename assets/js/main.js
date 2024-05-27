@@ -10,6 +10,10 @@ $(function(){
         autoplay: {
             disableOnInteraction: false,
         },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
         pagination: {
             el: ".pagination",
             clickable: true,
@@ -22,12 +26,6 @@ $(function(){
                 let num = this.activeIndex + 1;
                 $(".visualControl button").removeClass("on");
                 $(".visualControl button:nth-child(" + num + ")").addClass("on");
-
-                // 동영상 hold로 주석처리
-                /* let thisActiveIndex = this.activeIndex;
-                let currentVideo = $(".visualSwiper .swiper-slide").eq(thisActiveIndex).find("video");
-                currentVideo.get(0).currentTime = 0;
-                currentVideo.get(0).play(); */
             },
         },
     });
@@ -35,4 +33,23 @@ $(function(){
         $(".visualControl button").eq(0).addClass("on");
     };
     setTimeout(firstSet, 100);
+
+
+    $(".thumbBtnGroup li").click(function(){
+		const index = $(this).index();
+		if($(this).hasClass("on") == false){
+			$(this).addClass("on").siblings().removeClass("on");
+			$(".thumbWrap").hide();
+			$(".thumbListGroup li").stop().fadeOut();
+			$(".thumbListGroup li").eq(index).children(".thumbWrap").show();
+			$(".thumbListGroup li").eq(index).stop().fadeIn();
+			$(".thumbListGroup li .aos-init").removeClass("aos-animate");
+			$(`[data-aos][data-aos][data-aos-duration="1000"], body[data-aos-duration="1000"] [data-aos]`).css("transition-duration","0s");
+			setTimeout(() => {
+				$(`[data-aos][data-aos][data-aos-duration="1000"], body[data-aos-duration="1000"] [data-aos]`).css("transition-duration","1s");
+				$(".thumbListGroup li .aos-init").addClass("aos-animate");
+			} , 100);
+		}		
+	});
+    
 });

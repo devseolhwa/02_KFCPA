@@ -1,6 +1,5 @@
 $(function(){
     
-
     //lnb
 	$("#subVisual .lnb li.location02").on("click", function(){
 		$(this).toggleClass("active");
