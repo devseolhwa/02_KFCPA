@@ -77,7 +77,6 @@ $(function(){
 		});		
 	}
 
-
     AOS.init({
         once : true,
         throttleDelay : 99,

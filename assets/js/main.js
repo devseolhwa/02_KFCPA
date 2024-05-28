@@ -1,8 +1,8 @@
 $(function(){
     
     // 비주얼 스와이프
-    let videoBulArray = ["01", "02", "03"];
-    let videovisual = new Swiper(".visualSwiper", {
+    let visualArray = ["01", "02", "03"];
+    let visualSwiper = new Swiper(".visualSwiper", {
         effect : "fade",
         centeredSlides: true,
         speed: 1000,
@@ -18,7 +18,7 @@ $(function(){
             el: ".pagination",
             clickable: true,
             renderBullet: function (index, className) {
-                return '<button type="button" class="' + className + '">' + videoBulArray[index] + '<span class="bar"></span></button>';
+                return '<button type="button" class="' + className + '">' + visualArray[index] + '<span class="bar"></span></button>';
             },		
         },
         on: {
@@ -34,22 +34,49 @@ $(function(){
     };
     setTimeout(firstSet, 100);
 
-
+    // 협회주요활동 tab
     $(".thumbBtnGroup li").click(function(){
 		const index = $(this).index();
 		if($(this).hasClass("on") == false){
 			$(this).addClass("on").siblings().removeClass("on");
-			$(".thumbWrap").hide();
-			$(".thumbListGroup li").stop().fadeOut();
-			$(".thumbListGroup li").eq(index).children(".thumbWrap").show();
-			$(".thumbListGroup li").eq(index).stop().fadeIn();
-			$(".thumbListGroup li .aos-init").removeClass("aos-animate");
+			$(".thumbListGroup > li").stop().hide();
+			$(".thumbListGroup > li").eq(index).stop().fadeIn();
+			$(".thumbListGroup > li .aos-init").removeClass("aos-animate");
 			$(`[data-aos][data-aos][data-aos-duration="1000"], body[data-aos-duration="1000"] [data-aos]`).css("transition-duration","0s");
 			setTimeout(() => {
 				$(`[data-aos][data-aos][data-aos-duration="1000"], body[data-aos-duration="1000"] [data-aos]`).css("transition-duration","1s");
-				$(".thumbListGroup li .aos-init").addClass("aos-animate");
+				$(".thumbListGroup > li .aos-init").addClass("aos-animate");
 			} , 100);
 		}		
 	});
+
+    // 회원사 스와이프
+    let partnerSwiper  = new Swiper(".partnerSwiper", {
+        slidesPerView: 5,
+        //spaceBetween: 63,
+        autoplay: true,
+        loop: true,
+        breakpoints: {
+            1500: {
+                slidesPerView: 5,
+            },
+            1100: {
+                slidesPerView: 4,
+            },
+            850: {
+                slidesPerView: 3,
+            },
+            550: {
+                slidesPerView: 2,
+            },
+            320: {
+                slidesPerView: 1,
+            },
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        }
+    });
     
 });
