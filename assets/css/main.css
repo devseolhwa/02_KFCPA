@@ -91,7 +91,7 @@
 .thumbList li a:hover .text .button:after{border-color: #00295D;}
 .thumbList li a:hover .img img{transform: scale(1.1);-webkit-transition: transform 2s;transition: transform 2s;}
 
-.section04{position: relative;padding: 100px 0 109px;background-image: url(../images/bg_section04.jpg);background-size: cover;background-position: center;background-repeat: no-repeat;box-sizing: border-box;}
+.section04{position: relative;padding: 100px 0 109px;background-image: url(../images/bg_section04.jpg);background-size: cover;background-position: center;background-repeat: no-repeat;box-sizing: border-box;overflow: hidden;}
 .section04 .inner{position: relative;max-width: 1500px;width: 100%;margin: 0 auto;}
 .section04 .titleGroup{position: relative;margin-bottom: 60px;}
 .section04 .titleGroup:before{content: "";position: absolute;right: 40px;bottom: 32px;width: calc(100% - 300px);height: 1px;background: #fff;}
@@ -173,7 +173,13 @@
 
 @media screen and (max-width: 1399px){
 
-
+    .section02{padding: 100px 0 200px;}
+    .section02:before{width: 40%;}
+    .introductionSlide .imgBox{position: relative;width: 50%;padding-bottom: 33%;height: 0;}
+    .introductionSlide .imgBox img{position: absolute;width: 100%;height: 100%;object-fit: cover;}
+    .introductionSlide .txtBox{position: relative;top: 150px;width: 50%;height: auto;padding: 50px 30px 30px;border-radius: 65px 0 35px 0;z-index: 9;}
+    .introductionSlide .txtBox .title:before{width: calc(100% - 250px);}
+    .introductionControl{bottom: 0;}
     .thumbList{width: 780px;}
     .section05 .InfoGroup{flex-direction: column;}
     .section05 .InfoGroup > ul{width: 100%;}
@@ -181,13 +187,14 @@
     .consultingInfo{width: 100%;}
     .consultingInfo ul{width: calc(100% - 300px);}
     
+    
 }
 
 @media screen and (max-width: 1199px){
 
-    .visualSwiper .visualText p:nth-child(1){margin-bottom: 20px;font-size: 16px;}
-    .visualSwiper .visualText p:nth-child(2){font-size: 28px;}
-    .visualSwiper .visualText p:nth-child(3){font-size: 28px;}
+    .visualSwiper .visualText p:nth-child(1){margin-bottom: 20px;font-size: 24px;}
+    .visualSwiper .visualText p:nth-child(2){font-size: 34px;}
+    .visualSwiper .visualText p:nth-child(3){font-size: 34px;}
     .visualWrap .visualControl .swiper-button-prev{left: 50px;}
     .visualWrap .visualControl .swiper-button-next{right: 50px;}
     .scrollDown{bottom: 40px;right: 2%;}
@@ -213,20 +220,39 @@
 
 @media screen and (max-width: 767px){
 
+    .visualSwiper{min-height: 550px;}
+    .visualSwiper .visualText p:nth-child(1){margin-bottom: 20px;font-size: 16px;}
+    .visualSwiper .visualText p:nth-child(2){font-size: 28px;}
+    .visualSwiper .visualText p:nth-child(3){font-size: 28px;}
     .visualWrap .visualControl{padding-top: 250px;}
     .visualWrap .visualControl .swiper-button-prev, .visualWrap .visualControl .swiper-button-next{display: none;}
     .visualWrap .visualControl button{width: 70px;font-size: 12px;}
     .visualWrap .visualControl button:after{height: 1px;}
     .visualWrap .visualControl button .bar{height: 1px;margin-top: 2px;}
-    .scrollDown{right: 0;}
-    .scrollDown p{margin-bottom: 35px;font-size: 12px;}
+    .scrollDown{right: -14px;}
+    .scrollDown p{margin-bottom: 40px;font-size: 12px;}
     .scrollDown i{width: 16px;height: 22px;}
     .scrollDown i:after{height: 5px;}
-
-    .section02{padding: 50px 0;}
+    
+    .section02{padding: 50px 0 90px;}
+    .section02:before{width: 35%;}
+    .section02 .titleGroup{margin-left: 0;}
     .section02 .titleGroup .titleSm{font-size: 16px;}
     .section02 .titleGroup .titleLg{font-size: 36px;line-height: 50px;}
-
+    .introductionSlide{margin-top: 30px;}
+    .introductionSlide .swiper-slide{flex-direction: column;}
+    .introductionSlide .txtBox{top: inherit;width: 100%;}
+    .introductionSlide .txtBox .label{right: -5px;bottom: -25px;font-size: 80px;}
+    .introductionSlide .txtBox .title{font-size: 25px;}
+    .introductionSlide .txtBox .title:before{bottom: 17px;right: 30px;width: calc(100% - 170px);}
+    .introductionSlide .txtBox .title:after{font-size: 30px;line-height: 40px;}
+    .introductionSlide .txtBox .text{font-size: 15px;}
+    .introductionSlide .txtBox a{width: 105px;height: 33px;margin-top: 88px;font-size: 12px;}
+    .introductionSlide .imgBox{width: 100%;padding-bottom: 60%;border-radius: 0px 20px 20px 20px;}
+    .introductionControl{bottom: -32px;right: 50%;width: 160px;transform: translateX(50%);}
+    .introductionControl .swiper-button-prev, .introductionControl .swiper-button-next{font-size: 10px;}
+    .introductionControl .swiper-button-prev span, .introductionControl .swiper-button-next span{width: 30px;height: 30px;}
+    
     .section03{padding: 50px 0;background-image: url(../images/bg_section03_m.jpg);}
     .section03 .titleGroup .titleSm{font-size: 16px;}
     .section03 .titleGroup .titleLg{font-size: 36px;line-height: 50px;}
@@ -277,13 +303,16 @@
     .section05 .InfoGroup > ul > li .title{font-size: 17px;margin-top: 0;}
     .section05 .InfoGroup > ul > li > a{right: 20px;width: 75px;height: 24px;padding: 0 10px;margin-top: -12px;font-size: 10px;}
     .section05 .InfoGroup > ul > li > a:after{right: 8px;width: 15px;height: 15px;background-size: 12px;}
-    .consultingInfo{height: 190px;margin-top: 15px;padding: 20px;}
-    .consultingInfo .consultingTitle{margin-top: 0;}
+    .consultingInfo{height: 190px;margin-top: 15px;padding: 10px 20px 20px;}
+    .consultingInfo .consultingTitle{margin-top: 10px;}
     .consultingInfo .consultingTitle .stitle{font-size: 13px;}
     .consultingInfo .consultingTitle .title{font-size: 17px;margin-top: 0;}
-    .consultingInfo ul{width: calc(100% - 160px);max-width: none;}
+    .consultingInfo ul{width: calc(100% - 150px);max-width: none;}
     .consultingInfo ul li{padding: 10px 0 10px 40px;}
-    .consultingInfo ul li:before{width: 28px;height: 28px;margin-top: -14px;background-size: 13px auto;}
+    .consultingInfo ul li:before{width: 28px;height: 28px;margin-top: -14px;}
+    .consultingInfo ul li:nth-child(1):before{background-image: url(../images/icon_tel_m.svg);}
+    .consultingInfo ul li:nth-child(2):before{background-image: url(../images/icon_phone_m.svg);}
+    .consultingInfo ul li:nth-child(3):before{background-image: url(../images/icon_email_m.svg);}
     .consultingInfo ul li strong{font-size: 14px;line-height: 1;}
     .consultingInfo ul li p{font-size: 12px;line-height: 1;}
     .btnKakao{width: 148px;height: 91px;padding: 32px 0 0 42px;background-size: 148px 91px;}
@@ -293,6 +322,10 @@
     .scrollText .textImg{animation: scrollText 10s linear 0s infinite;}
     .scrollText .textImg img{width: 455px;height: 101px;margin-left: 0;}
     
+}
+@media screen and (max-width: 320px){
+    .consultingInfo ul{width: calc(100% - 115px);}
+    .btnKakao{width: 125px;padding: 32px 0 0 25px;}
 }
 
 /* scroll down */
