@@ -34,6 +34,31 @@ $(function(){
     };
     setTimeout(firstSet, 100);
 
+    // section02 배경 active
+    let section02 = document.querySelector(".section02"),
+        height100 = 100;
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > height100) {
+            section02.classList.add("active");
+        } else {
+            section02.classList.remove("active");
+        }
+    });
+
+    // 협회소개 스와이프
+    new Swiper(".introductionSlide", {
+        effect: 'fade',
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
     // 협회주요활동 tab
     $(".thumbBtnGroup li").click(function(){
 		const index = $(this).index();
@@ -51,26 +76,21 @@ $(function(){
 	});
 
     // 회원사 스와이프
-    let partnerSwiper  = new Swiper(".partnerSwiper", {
-        slidesPerView: 5,
+    new Swiper(".partnerSwiper", {
+        slidesPerView: 3,
         //spaceBetween: 63,
         autoplay: true,
         loop: true,
         breakpoints: {
-            1500: {
+            1700: {
                 slidesPerView: 5,
             },
             1100: {
                 slidesPerView: 4,
             },
-            850: {
-                slidesPerView: 3,
-            },
-            550: {
-                slidesPerView: 2,
-            },
             320: {
-                slidesPerView: 1,
+                slidesPerView: 3,
+                centeredSlides: true,
             },
         },
         navigation: {

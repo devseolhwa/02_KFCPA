@@ -66,8 +66,8 @@ body {overflow-y: overlay;}
 .wbreak {word-break: break-all;}
 
 /* strong color */
-.strong_txt1{color: #AD9F35 !important;}
-.strong_txt2{color: #D9CC6D !important;}
+.strong_txt1{color: #00295D !important;}
+.strong_txt2{color: #ECEFF3 !important;}
 .basic_txt1 {color: #fff !important;}/* withe */
 .basic_txt2 {color: #000 !important;}/* black */
 .basic_txt3 {color: #222 !important;}/* gray */
