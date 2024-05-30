@@ -3,8 +3,8 @@
 .visualSwiper{width: 100%;min-height: 800px;height: 100vh;}
 .visualSwiper .swiper-wrapper{display: flex !important;}
 .visualSwiper .swiper-slide{position: relative;height: 100%;}
-.visualSwiper .visualBg{width: 100%;min-height: 800px;height: 100vh;}
-.visualSwiper .visualBg img{width: 100%;height: 100%;object-fit: cover;transform: scale(1.2);}
+.visualSwiper .visualBg{position: relative;width: 100%;min-height: 800px;height: 100vh;}
+.visualSwiper .visualBg img{position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;transform: scale(1.2);}
 .visualSwiper .visualText{position: absolute;top: 50%;left: 50%;display: flex;flex-wrap: wrap;flex-direction: column;justify-content: center;align-items: center;width: 100%;height: 100%;padding-bottom: 50px;box-sizing: border-box;text-align: center;z-index: 1;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);}
 .visualSwiper .visualText p{transform: translateY(1rem);-webkit-transform: translateY(1rem);-moz-transform: translateY(1rem);-ms-transform: translateY(1rem);-o-transform: translateY(1rem);opacity: 0;transition: 1.1s;-webkit-transition: 1.1s;-moz-transition: 1.1s;-ms-transition: 1.1s;-o-transition: 1.1s;transition-delay: 0.8s;}
 .visualSwiper .visualText p:nth-child(1){margin-bottom: 19px;font-size: 28px;color: #FFF;font-weight: 350;line-height: 125%;letter-spacing: -1px;}
@@ -27,7 +27,7 @@
 .visualSwiper .swiper-slide-active .visualBg img{transform: scale(1);transition: transform 2.5s;}
 .visualSwiper .swiper-slide:not(.swiper-slide-active) img{opacity: 0;}
 .visualSwiper .swiper-slide-active .visualText p{opacity: 1;transform: none;-webkit-transform: none;-moz-transform: none;-ms-transform: none;-o-transform: none;}
-.scrollDown {position: absolute;bottom: 50px;right: 40px;text-align: center;-webkit-animation: scrollDown 2.2s infinite;-moz-animation: scrollDown 2.2s infinite;-ms-animation: scrollDown 2.2s infinite;-o-animation: scrollDown 2.2s infinite;animation: scrollDown 2.2s infinite;z-index: 9;}
+.scrollDown {position: absolute;bottom: 50px;right: 34px;text-align: center;-webkit-animation: scrollDown 2.2s infinite;-moz-animation: scrollDown 2.2s infinite;-ms-animation: scrollDown 2.2s infinite;-o-animation: scrollDown 2.2s infinite;animation: scrollDown 2.2s infinite;z-index: 9;}
 .scrollDown p {margin-bottom: 46px;font-size: 14px;color: #fff;font-weight: 400;line-height: 26px;transform: rotate(90deg);text-transform: uppercase;}
 .scrollDown i {position: relative;display: inline-block;width: 19px;height: 28px;border: 1px solid #fff;border-radius: 15px;box-sizing: border-box;}
 .scrollDown i:after {content: "";position: absolute;top: 5px;left: 50%;transform: translateX(-50%);width: 1px;height: 6px;border-radius: 2px;background: #fff;-webkit-animation: scrollDownIcon 2s infinite;-moz-animation: scrollDownIcon 2s infinite;-ms-animation: scrollDownIcon 2s infinite;-o-animation: scrollDownIcon 2s infinite;animation: scrollDownIcon 2s infinite;}
@@ -42,7 +42,7 @@
 .section02 .titleGroup .titleLg b{font-weight: 700;}
 .introductionSlide {margin-top: -100px;}
 .introductionSlide .swiper-slide{display: flex;justify-content: flex-end;}
-.introductionSlide .txtBox{position: absolute;left: 0;top: 170px;width: 703px;height: 504px;padding: 90px 58px 0 70px;background: #00295D;border-radius: 100px 0px 50px 0px;box-sizing: border-box;overflow: hidden;transform: translate(50px, 0);opacity: 0;}
+.introductionSlide .txtBox{position: absolute;left: 0;top: 170px;width: 703px;height: 504px;padding: 90px 58px 0 70px;background: #00295D;border-radius: 100px 0px 50px 0px;box-sizing: border-box;overflow: hidden;transform: translate(50px, 0);opacity: 0;z-index: 2;}
 .introductionSlide .txtBox .label{position: absolute;right: -19px;bottom: -61px;font-size: 180px;color: rgba(255, 255, 255, 0.1);font-weight: 900;line-height: normal;letter-spacing: -1px;}
 .introductionSlide .txtBox .title{position: relative;font-size: 40px;color: #FFF;font-weight: 500;line-height: 175%;letter-spacing: -1px;}
 .introductionSlide .txtBox .title:before{content: "";position: absolute;right: 40px;bottom: 32px;width: 300px;height: 1px;background: #fff;}
@@ -50,7 +50,8 @@
 .introductionSlide .txtBox .text{margin-top: 10px;font-size: 18px;color: #FFF;font-weight: 350;line-height: 32px;letter-spacing: -1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;white-space: normal;line-height: 1.7;height: 5.1em;text-align: left;word-wrap: break-word;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;word-break: keep-all;}
 .introductionSlide .txtBox a{display: flex;align-items: center;justify-content: center;width: 160px;height: 50px;margin-top: 110px;border: 1px solid #FFF;border-radius: 50px;font-size: 16px;color: #FFF;font-weight: 500;line-height: 35px;letter-spacing: -1px;text-align: center;-webkit-transition: .3s;transition: .3s;}
 .introductionSlide .txtBox a:hover{background: #fff;color: #00295D;}
-.introductionSlide .imgBox{width: 960px;height: 570px;border-radius: 20px;overflow: hidden;}
+.introductionSlide .imgBox{position: relative;width: 960px;height: 570px;border-radius: 20px;overflow: hidden;z-index: 1;}
+.introductionSlide .imgBox img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
 .introductionSlide .swiper-slide-active .txtBox{transform: translate(0, 0);opacity: 1;transition: all 2s;-webkit-transition: all 2s;}
 
 .introductionControl{position: absolute;bottom: -58px;right: 0;width: 220px;}
@@ -84,8 +85,8 @@
 .thumbList li a .text .title{margin-top: 10px;font-size: 22px;color: #222;font-weight: 700;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;white-space: normal;line-height: 1.4;height: 2.8em;text-align: left;word-wrap: break-word;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;word-break: keep-all;}
 .thumbList li a .text .button{position: relative;display: inline-block;margin-top: 26px;padding-right: 35px;font-size: 14px;color: #9B9B9B;font-weight: 500;line-height: 26px;letter-spacing: -1px;-webkit-transition: 0.5s;transition: 0.5s;}
 .thumbList li a .text .button:after{content: "";position: absolute;right: 0;top: 50%;transform: translateY(-50%);width: 24px;height: 24px;background-color: #fff;background-image: url(../images/arrow_right_gray.png);background-size: 20px;background-position: center;background-repeat: no-repeat;border: 1px solid #CECECE;border-radius: 100%;box-sizing: border-box;-webkit-transition: 0.5s;transition: 0.5s;}
-.thumbList li a .img{width: 100%;height: 250px;overflow: hidden;}
-.thumbList li a .img img{width: 100%;height: 100%;object-fit: cover;transform: scale(1);}
+.thumbList li a .img{position: relative;width: 100%;height: 250px;overflow: hidden;}
+.thumbList li a .img img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;transform: scale(1);}
 .thumbList li a:hover{border-radius: 100px 10px;border: 3px solid #00295D;}
 .thumbList li a:hover .text .button{color: #00295D;}
 .thumbList li a:hover .text .button:after{border-color: #00295D;}
@@ -158,10 +159,6 @@
 .btnKakao{position: absolute;left: 0;bottom: 0;width: 297px;height: 182px;padding: 63px 0 0 92px;background-image: url(../images/bg_kakaotalk.png);background-position: center;background-repeat: no-repeat;box-sizing: border-box;}
 .btnKakao p:nth-child(1){font-size: 17px;color: #381C1E;font-weight: 500;line-height: 35px;letter-spacing: -1px;}
 .btnKakao p:nth-child(2){display: flex;align-items: center;justify-content: center;width: 140px;height: 40px;margin-top: 6px;border-radius: 50px;background: #381C1E;color: #F7E409;text-align: center;font-size: 14px;font-weight: 500;line-height: normal;letter-spacing: -1px;}
-.scrollText{position: absolute;bottom: -36px;}
-.scrollText .scrollTextInner{white-space: nowrap;}
-.scrollText .textImg{display: inline-block;width: fit-content;white-space: nowrap;animation: scrollText 20s linear 0s infinite;}
-.scrollText .textImg img{display: inline-block;width: 1492px;height: 159px;max-width: none;margin-left: 40px;}
 
 @media screen and (max-width: 1699px){
 
@@ -175,18 +172,16 @@
 
     .section02{padding: 100px 0 200px;}
     .section02:before{width: 40%;}
-    .introductionSlide .imgBox{position: relative;width: 50%;padding-bottom: 33%;height: 0;}
-    .introductionSlide .imgBox img{position: absolute;width: 100%;height: 100%;object-fit: cover;}
+    .introductionSlide .imgBox{width: 50%;padding-bottom: 33%;height: 0;}
     .introductionSlide .txtBox{position: relative;top: 150px;width: 50%;height: auto;padding: 50px 30px 30px;border-radius: 65px 0 35px 0;z-index: 9;}
     .introductionSlide .txtBox .title:before{width: calc(100% - 250px);}
-    .introductionControl{bottom: 0;}
+    .introductionControl{bottom: -50px;}
     .thumbList{width: 780px;}
     .section05 .InfoGroup{flex-direction: column;}
     .section05 .InfoGroup > ul{width: 100%;}
     .section05 .InfoGroup > ul > li{height: 120px;padding: 30px 40px 0;}
     .consultingInfo{width: 100%;}
     .consultingInfo ul{width: calc(100% - 300px);}
-    
     
 }
 
@@ -199,6 +194,7 @@
     .visualWrap .visualControl .swiper-button-next{right: 50px;}
     .scrollDown{bottom: 40px;right: 2%;}
 
+    .introductionControl{bottom: 0;}
     .section03 .inner{display: block;}
     .thumbControl{position: inherit;top: inherit;}
     .thumbBtnGroup{width: 100%;margin-top: 20px;display: flex;align-items: center;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;border-bottom: 1px solid #ddd;box-sizing: border-box;}
@@ -238,7 +234,7 @@
     .section02:before{width: 35%;}
     .section02 .titleGroup{margin-left: 0;}
     .section02 .titleGroup .titleSm{font-size: 16px;}
-    .section02 .titleGroup .titleLg{font-size: 36px;line-height: 50px;}
+    .section02 .titleGroup .titleLg{    margin-top: 0;font-size: 36px;line-height: 50px;}
     .introductionSlide{margin-top: 30px;}
     .introductionSlide .swiper-slide{flex-direction: column;}
     .introductionSlide .txtBox{top: inherit;width: 100%;}
@@ -251,11 +247,11 @@
     .introductionSlide .imgBox{width: 100%;padding-bottom: 60%;border-radius: 0px 20px 20px 20px;}
     .introductionControl{bottom: -32px;right: 50%;width: 160px;transform: translateX(50%);}
     .introductionControl .swiper-button-prev, .introductionControl .swiper-button-next{font-size: 10px;}
-    .introductionControl .swiper-button-prev span, .introductionControl .swiper-button-next span{width: 30px;height: 30px;}
+    .introductionControl .swiper-button-prev span, .introductionControl .swiper-button-next span{width: 30px;height: 30px;background-size: 15px;}
     
     .section03{padding: 50px 0;background-image: url(../images/bg_section03_m.jpg);}
     .section03 .titleGroup .titleSm{font-size: 16px;}
-    .section03 .titleGroup .titleLg{font-size: 36px;line-height: 50px;}
+    .section03 .titleGroup .titleLg{    margin-top: 0;font-size: 36px;line-height: 50px;}
     .thumbBtnGroup{margin-top: 10px;justify-content: space-between;}
     .thumbBtnGroup li{padding: 0;font-size: 16px;}
     .thumbList li {width: 100%;height: auto;margin-top: 30px !important;}
@@ -270,10 +266,10 @@
     .section04{padding: 50px 0 40px;background-image: url(../images/bg_section04_m.jpg);}
     .section04 .inner{max-width: 100%;padding: 0 20px;box-sizing: border-box;}
     .section04 .titleGroup{margin-bottom: 30px;}
-    .section04 .titleGroup:before{right: 100px;bottom: 20px;width: calc(100% - 300px);}
+    .section04 .titleGroup:before{right: 80px;bottom: 20px;width: calc(100% - 260px);}
     .section04 .titleGroup:after{display: none;}
     .section04 .titleGroup .titleSm{font-size: 16px;}
-    .section04 .titleGroup .titleLg{font-size: 36px;line-height: 50px;}
+    .section04 .titleGroup .titleLg{    margin-top: 0;font-size: 36px;line-height: 50px;}
     .partnerSwiper{margin: 0 -100px;}
     .partnerSwiper .swiper-slide a{margin: 0 5px;}
     .partnerSwiper .swiper-slide .img{padding: 0 30px;box-sizing: border-box;}
@@ -291,7 +287,7 @@
     .section05 .titleGroup:before{right: 30px;bottom: 20px;width: calc(100% - 200px);}
     .section05 .titleGroup:after{font-size: 30px;line-height: 45px;}
     .section05 .titleGroup .titleSm{font-size: 16px;}
-    .section05 .titleGroup .titleLg{font-size: 36px;line-height: 50px;}
+    .section05 .titleGroup .titleLg{    margin-top: 0;font-size: 36px;line-height: 50px;}
     .section05 .imgGroup{flex-direction: column;}
     .section05 .imgGroup > li{width: 100%;height: 240px;padding: 115px 25px 0;background-size: cover;}
     .section05 .imgGroup > li + li{margin-top: 15px;}
@@ -318,9 +314,6 @@
     .btnKakao{width: 148px;height: 91px;padding: 32px 0 0 42px;background-size: 148px 91px;}
     .btnKakao p:nth-child(1){font-size: 11px;line-height: 17px;}
     .btnKakao p:nth-child(2){width: 82px;height: 20px;margin-top: 4px;font-size: 10px;}
-    .scrollText{bottom: -25px;}
-    .scrollText .textImg{animation: scrollText 10s linear 0s infinite;}
-    .scrollText .textImg img{width: 455px;height: 101px;margin-left: 0;}
     
 }
 @media screen and (max-width: 320px){
@@ -369,25 +362,4 @@
 @keyframes scrollDownIcon {
     0%{top: 5px;}
 	100% {top: 15px;}
-}
-
-@-webkit-keyframes scrollText {
-    0% {transform: translate(0, 0);}
-    100% {transform: translate(-100%, 0);}
-}
-@-moz-keyframes scrollText {
-    0% {transform: translate(0, 0);}
-    100% {transform: translate(-100%, 0);}
-}
-@-ms-keyframes scrollText {
-    0% {transform: translate(0, 0);}
-    100% {transform: translate(-100%, 0);}
-}
-@-o-keyframes scrollText {
-    0% {transform: translate(0, 0);}
-    100% {transform: translate(-100%, 0);}
-}
-@keyframes scrollText {
-    0% {transform: translate(0, 0);}
-    100% {transform: translate(-100%, 0);}
 }

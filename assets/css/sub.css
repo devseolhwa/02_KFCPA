@@ -1,61 +1,149 @@
 #sub{min-height: 700px;}
 
-#subVisual{position: relative;padding: 11% 0 6%;text-align: center;z-index: 50;}
+#subVisual{position: relative;height: 600px;padding: 238px 0 0;box-sizing: border-box;text-align: center;z-index: 50;}
 #subVisual .visualbg{width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: -10;overflow: hidden;} 
-#subVisual .visualbg:before{content: "";position: absolute;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: 100%;transform: scale(1.2);transform-origin: center center;animation: scale 1s 0.5s forwards;}
-#subVisual .visualbg.bg01:before{background: url(../images/sub/bg_subVisual01.jpg) no-repeat center center / cover;}
-#subVisual .visualbg.bg02:before{background: url(../images/sub/bg_subVisual02.jpg) no-repeat center center / cover;}
-#subVisual .visualbg.bg03:before{background: url(../images/sub/bg_subVisual03.jpg) no-repeat center center / cover;}
-#subVisual .visualtext p{font-size: 24px;color: #FFF;font-weight: 350;line-height: 35px;letter-spacing: -1px;}
-#subVisual .visualtext h2{overflow: hidden;margin: 19px 0 62px;font-size: 60px;color: #FFF;font-weight: 700;line-height: 70px;letter-spacing: -1px;}
-#subVisual .lnb{display: flex;justify-content: center;align-items: center;}
-#subVisual .lnb li a, #subVisual .lnb li button{font-size: 15px;color: rgba(255, 255, 255, 0.7);font-weight: 500;line-height: normal;letter-spacing: -0.6px;}
-#subVisual .lnb li{position: relative;}
-#subVisual .lnb > li:after{content: url(../images/sub/icon_arrow_left.svg);position: absolute;top: 50%;right: 0;transform: translateY(-50%);}
-#subVisual .lnb > li:last-of-type:after{ display: none;}
-#subVisual .lnb li a{display: inline-block;}
-#subVisual .lnb > li > a, #subVisual .lnb li button{display: block;padding: 0 39px 0 26px;vertical-align: middle;}
-#subVisual .lnb > li > a img{vertical-align: 0;}
-#subVisual .lnb li button{ background: none;border: none;padding-right: 42px;position: relative;cursor: pointer;}
-#subVisual .lnb li button:after{content: url(../images/sub/icon_arrow_depth.svg);position: absolute;top: 50%;right: 0;transform: translateY(-50%);transition: all 0.5s;}
-#subVisual .lnb .depth02{display: none;min-width: fit-content;min-width: 155px;width: 100%;position: absolute;top: 31px;left: 50%;transform: translateX(-50%);padding: 16px 22px;background: #AD9F35;border-radius: 10px;box-sizing: border-box;text-align: left;z-index: 50;}
-#subVisual .lnb .depth02 li{overflow: hidden;}
-#subVisual .lnb .depth02 li + li{margin-top: 10px;}
-#subVisual .lnb .depth02 li a{position: relative;font-size: 14px;color: rgba(255, 255, 255, 0.5);font-weight: 700;line-height: 26px;letter-spacing: -1px;transition: all 0.5s;}
-#subVisual .lnb .depth02 li a:after{content: "";position: absolute;left: 0;bottom: 0;display: block;width: 0;height: 1px;background: #fff;transition: all 0.3s;}
-#subVisual .lnb .depth02 li a:hover, #subVisual .lnb .depth02 li.on a{color: #fff;}
-#subVisual .lnb .depth02 li a:hover:after, #subVisual .lnb .depth02 li.on a:after{width: 100%;}
-#subVisual .lnb li.active button:after{transform: translateY(-50%) scaleY(-1);}
+#subVisual .visualbg:before{content: "";position: absolute;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: 100%;background-position: center;background-size: cover;background-repeat: no-repeat;transform: scale(1.2);transform-origin: center center;animation: scale 1s 0.5s forwards;}
+#subVisual .visualbg.bg01:before{background-image: url(../images/sub/bg_subVisual01.jpg);}
+#subVisual .visualbg.bg02:before{background-image: url(../images/sub/bg_subVisual02.jpg);}
+#subVisual .visualbg.bg03:before{background-image: url(../images/sub/bg_subVisual03.jpg);}
+#subVisual .visualbg.bg04:before{background-image: url(../images/sub/bg_subVisual04.jpg);}
+#subVisual .visualbg.bg05:before{background-image: url(../images/sub/bg_subVisual05.jpg);}
+#subVisual .visualbg.bg06:before{background-image: url(../images/sub/bg_subVisual06.jpg);}
+#subVisual .visualtext p{font-size: 28px;color: #FFF;font-weight: 350;line-height: 125%;letter-spacing: -1px;text-align: center;}
+#subVisual .visualtext h2{overflow: hidden;margin-top: 5px;font-size: 60px;color: #FFF;font-weight: 900;line-height: 140%;letter-spacing: -1px;text-align: center;}
+#subVisual .lnbWrap{position: absolute;bottom: 0;left: 50%;width: 50%;}
+#subVisual .lnb{display: flex;align-items: center;}
+#subVisual .lnb > li.home{width: 100px;height: 100px;}
+#subVisual .lnb > li.home a{display: flex;align-items: center;justify-content: center;width: 100%;height: 100%;background: #46A4C6;}
+#subVisual .lnb > li:nth-child(2){display: none;}
+#subVisual .lnb > li:nth-child(3){width: calc(100% - 100px);height: 100px;background: #00295D;overflow-x: auto;-webkit-overflow-scrolling: touch;scrollbar-color: rgba(255, 255, 255, 0.2) transparent;scrollbar-width: thin;}
+#subVisual .lnb > li > button{display: none;}
+#subVisual .lnb > li > ul{display: flex;flex-direction: row;flex-wrap: nowrap;align-items: center;justify-content: flex-start;width: max-content;height: 100%;padding: 0 30px;box-sizing: border-box;}
+#subVisual .lnb > li > ul > li + li{margin-left: 30px;}
+#subVisual .lnb > li > ul > li > a{font-size: 18px;color: rgba(255, 255, 255, 0.5);font-weight: 500;line-height: normal;letter-spacing: -1px;}
+#subVisual .lnb > li > ul > li.on > a{color: #fff;text-decoration: underline;}
 
-.subContent{min-height: 500px;padding: 80px 0 0;box-sizing: border-box;}
-.subContent .inner{max-width: 1500px;width: 100%;margin: 0 auto;}
-.subContent .subTitle{overflow: hidden;font-size: 48px;color: #000;font-weight: 700;line-height: normal;text-align: center;}
+.subContent{position: relative;min-height: 500px;padding: 120px 0 200px;box-sizing: border-box;overflow: hidden;}
+.subContent:before{content: "";position: absolute;top: -40px;left: -16px;width: 654px;height: 730px;background-image: url(../images/sub/mark_k.png);background-position: center;background-size: 100%;background-repeat: no-repeat;z-index: -1;}
+.subContent .inner{max-width: 1540px;width: 100%;margin: 0 auto;padding: 0 20px;box-sizing: border-box;}
+.subContent .subTitle{margin-bottom: 54px;text-align: center;}
+.subContent .subTitle:after{content: "";display: block;width: 60px;height: 8px;margin: 38px auto 0;background: #00295D;}
+.subContent .subTitle h3{font-size: 52px;color: #222;font-weight: 700;line-height: normal;}
+.subTextLg{font-size: 36px;color: #222;font-weight: 300;line-height: 160%;letter-spacing: -0.6px;text-align: center;word-break: keep-all;}
+.subTextLg span{font-weight: 500;}
+
+/* 협회소개 - 협회소개 */
+.introductionWrap{margin-bottom: 80px;}
+.introductionWrap .imgGroup{position: relative;width: 100%;height: 650px;overflow: hidden;}
+.introductionWrap .imgGroup p{height: 100%;}
+.introductionWrap .imgGroup img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;transform: scale(1);}
+.introductionWrap .textGroup{margin-top: 70px;display: flex;justify-content: space-between;align-items: flex-start;}
+.introductionWrap .textGroup li:nth-child(1){width: calc(48% - 90px);}
+.introductionWrap .textGroup li:nth-child(2){width: 52%;margin-top: 30px;}
+.introductionWrap .textGroup li p{font-size: 18px;color: #666;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
+.introductionWrap .textGroup li strong{display: block;margin-top: 100px;font-size: 22px;color: #222;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
+
+/* 협회소개 - 인사말 */
+.greetingWrap{display: flex;justify-content: space-between;align-items: flex-start;margin-top: 125px;}
+.greetingWrap .imgGroup{width: 52%;}
+.greetingWrap .textGroup{width: calc(48% - 90px);}
+.greetingWrap .textGroup strong{display: block;margin-top: 70px;font-size: 22px;color: #222;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
+.greetingWrap .textGroup p{margin-top: 25px;font-size: 18px;color: #666;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
+.greetingWrap .textGroup .sign{margin-top: 60px;font-size: 14px;color: #222;font-weight: 500;line-height: normal;letter-spacing: -0.6px;}
+.greetingWrap .textGroup .sign em{font-size: 40px;font-weight: 400;font-family: "Nanum Brush Script";}
+.greetingWrap .textGroup .historyList{padding: 15px 20px;margin-top: 10px;background: #F9F9F9;border: 1px solid #E2E2E2;border-radius: 10px;box-sizing: border-box;}
+.greetingWrap .textGroup .historyList li{position: relative;padding-left: 8px;font-size: 15px;color: #777;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
+.greetingWrap .textGroup .historyList li:before{content: "";position: absolute;left: 0;top: 10px;width: 3px;height: 3px;border-radius: 100%;background: #00295D;box-sizing: border-box;}
+
+/* 협회소개 - 임원명단 */
+.executivesWrap{}
+.executivesWrap ul{}
+.executivesWrap ul li{}
+.executivesWrap ul li img{}
+.executivesWrap ul li p{}
+.executivesWrap ul li p.position{}
+.executivesWrap ul li p.name{}
+.executivesWrap ul li p.job{}
 
 @media screen and (max-width: 1499px){
 
-    .subContent .inner{padding: 0 20px;box-sizing: border-box;}
+    #subVisual{height: 500px;padding: 180px 0 0;}
+    #subVisual .lnbWrap{left: 0;width: 100%;}
+    #subVisual .lnb > li.home{width: 80px;height: 80px;}
+    #subVisual .lnb > li:nth-child(3){width: calc(100% - 80px);height: 80px;}
 
+    .introductionWrap{margin-bottom: 50px;}
+    .introductionWrap .imgGroup{height: 450px;}
+    .introductionWrap .textGroup li:nth-child(1){width: calc(55% - 50px);}
+    .introductionWrap .textGroup li:nth-child(2){width: 45%;margin-top: 0;}
+
+    .greetingWrap .imgGroup{width: 40%;}
+    .greetingWrap .textGroup{width: calc(60% - 50px);}
 }
 
 @media screen and (max-width: 1199px){
-   
+
+    #subVisual .visualtext p{font-size: 26px;}
+    #subVisual .visualtext h2{font-size: 50px;}
+    #subVisual .lnb > li{position: relative;}
+    #subVisual .lnb > li.home{width: 50px;height: 50px;}
+    #subVisual .lnb > li.home img{width: 18px;height: 16px;}
+    #subVisual .lnb > li:nth-child(2){display: flex;width: calc(50% - 25px);height: 50px;background: #F5F5F5;}
+    #subVisual .lnb > li:nth-child(3){display: flex;width: calc(50% - 25px);height: 50px;overflow-x: inherit;}
+    #subVisual .lnb > li > button{position: relative;display: block;width: 100%;padding: 0 40px 0 20px;box-sizing: border-box;font-size: 14px;font-weight: 400;line-height: normal;letter-spacing: -0.6px;text-align: left;}
+    #subVisual .lnb > li:nth-child(2) > button{color: #333;}
+    #subVisual .lnb > li:nth-child(3) > button{color: #fff;}
+    #subVisual .lnb > li > button:after{position: absolute;top: 50%;right: 20px;transform: translateY(-50%);transition: all 0.5s;}
+    #subVisual .lnb > li:nth-child(2) > button:after{content: url(../images/sub/arrow_down_black.svg);}
+    #subVisual .lnb > li:nth-child(3) > button:after{content: url(../images/sub/arrow_down_white.svg);}
+    #subVisual .lnb > li > ul{display: none;position: absolute;top: 50px;left: 50%;transform: translateX(-50%);width: 100%;height: auto;background: #FFF;padding: 0;box-sizing: border-box;text-align: left;z-index: 50;}
+    #subVisual .lnb > li:nth-child(2) > ul{border: 1px solid #DADADA;}
+    #subVisual .lnb > li:nth-child(3) > ul{border: 1px solid #00295D;}
+    #subVisual .lnb > li > ul > li{box-sizing: border-box;}
+    #subVisual .lnb > li > ul > li + li{margin-left: 0;border-top: 1px solid #DADADA;}
+    #subVisual .lnb > li > ul > li > a{position: relative;display: block;width: 100%;padding: 0 20px;box-sizing: border-box;font-size: 14px;color: #333;font-weight: 400;line-height: 350%;letter-spacing: -0.6px;transition: all 0.5s;}
+    #subVisual .lnb > li:nth-child(2) > ul > li > a:hover, #subVisual .lnb > li:nth-child(2) > ul > li.on > a{background: #F5F5F5;color: #00295D;font-weight: 700;text-decoration: underline;}
+    #subVisual .lnb > li:nth-child(3) > ul > li > a:hover, #subVisual .lnb > li:nth-child(3) > ul > li.on > a{background: #00295D;color: #fff;font-weight: 700;text-decoration: inherit;}
+    .subContent{padding: 90px 0 150px;}
 }
 
 @media screen and (max-width: 767px){
 
-    #subVisual{padding: 33% 0 18%;}
+    #subVisual{height: 400px;padding: 160px 0 0;}
     #subVisual .visualbg.bg01:before{background-image: url(../images/sub/bg_subVisual01_m.jpg);}
     #subVisual .visualbg.bg02:before{background-image: url(../images/sub/bg_subVisual02_m.jpg);}
     #subVisual .visualbg.bg03:before{background-image: url(../images/sub/bg_subVisual03_m.jpg);}
+    #subVisual .visualbg.bg04:before{background-image: url(../images/sub/bg_subVisual04_m.jpg);}
+    #subVisual .visualbg.bg05:before{background-image: url(../images/sub/bg_subVisual05_m.jpg);}
+    #subVisual .visualbg.bg06:before{background-image: url(../images/sub/bg_subVisual06_m.jpg);}
     #subVisual .visualtext p{font-size: 16px;line-height: 20px;}
-    #subVisual .visualtext h2{margin: 10px 0 30px;font-size: 40px;line-height: 40px;}
-    #subVisual .lnb li a, #subVisual .lnb li button{font-size: 14px;}
-    #subVisual .lnb > li > a, #subVisual .lnb li button{padding: 0 30px 0 15px;}
-    #subVisual .lnb .depth02{min-width: 130px;padding: 10px 10px 10px 17px;}
-    #subVisual .lnb .depth02 li a{font-size: 13px;}
+    #subVisual .visualtext h2{margin-top: 10px;font-size: 40px;line-height: 40px;}
+    .subContent{padding: 60px 0 100px;}
+    .subContent:before{top: 0;left: -20px;width: 259px;height: 360px;}
+    .subContent .subTitle{margin-bottom: 30px;}
+    .subContent .subTitle:after{width: 30px;height: 4px;margin: 26px auto 0;}
+    .subContent .subTitle h3{font-size: 32px;}
+    .subTextLg{font-size: 22px;}
 
-    .subContent{padding: 40px 0 0;}
-    .subContent .subTitle{font-size: 30px;}
+    .introductionWrap{margin-bottom: 0;}
+    .introductionWrap .imgGroup{height: 340px;}
+    .introductionWrap .textGroup li{width: 100% !important;}
+    .introductionWrap .textGroup{flex-direction: column;flex-wrap: nowrap;margin-top: 30px;}
+    .introductionWrap .textGroup li strong{margin-top: 22px;font-size: 18px;}
+    .introductionWrap .textGroup li p{margin-top: 22px;font-size: 15px;}
+
+    .greetingWrap{flex-direction: column;flex-wrap: nowrap;margin-top: 30px;}
+    .greetingWrap .imgGroup, .greetingWrap .textGroup{width: 100%;}
+    .greetingWrap .textGroup{margin-top: 50px;}
+    .greetingWrap .textGroup img{width: 140px;height: 38px;}
+    .greetingWrap .textGroup strong{margin-top: 30px;font-size: 18px;}
+    .greetingWrap .textGroup p{margin-top: 25px;font-size: 15px;}
+    .greetingWrap .textGroup .sign{margin-top: 25px;font-size: 13px;}
+    .greetingWrap .textGroup .sign em{font-size: 40px;}
+    .greetingWrap .textGroup .historyList{padding: 15px 20px;margin-top: 10px;}
+    .greetingWrap .textGroup .historyList li{font-size: 14px;}
+    .greetingWrap .textGroup .historyList li:before{top: 10px;}
+
 }
 
 @keyframes scale{ 
