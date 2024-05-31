@@ -56,14 +56,32 @@
 .greetingWrap .textGroup .historyList li:before{content: "";position: absolute;left: 0;top: 10px;width: 3px;height: 3px;border-radius: 100%;background: #00295D;box-sizing: border-box;}
 
 /* 협회소개 - 임원명단 */
-.executivesWrap{}
-.executivesWrap ul{}
-.executivesWrap ul li{}
-.executivesWrap ul li img{}
-.executivesWrap ul li p{}
-.executivesWrap ul li p.position{}
-.executivesWrap ul li p.name{}
-.executivesWrap ul li p.job{}
+.executivesWrap{border-top: 1px solid #00295D;box-sizing: border-box;}
+.executivesWrap ul{display: flex;align-items: center;justify-content: space-between;flex-direction: row;flex-wrap: wrap;}
+.executivesWrap ul li{display: flex;flex-direction: column;flex-wrap: nowrap;align-items: center;justify-content: center;width: calc(25% - 25px);margin-top: 30px;padding: 50px 0;background: #F9F9F9;border: 1px solid #DDD;box-sizing: border-box;}
+.executivesWrap ul li p{font-size: 18px;line-height: 150%;font-weight: 500;letter-spacing: -0.6px;}
+.executivesWrap ul li p.position{margin-top: 29px;color: #222;}
+.executivesWrap ul li p.name{font-size: 30px;color: #00295D;}
+.executivesWrap ul li p.job{margin-top: 17px;color: #666;font-weight: 400;}
+
+/* 협회소개 - 연혁 */
+.historyWrap{display: flex;justify-content: space-between;align-items: flex-start;flex-direction: row;flex-wrap: wrap;margin-top: 85px;}
+.historyWrap .textGroup{width: calc(53.333% - 70px);}
+.historyWrap .textGroup .year{padding-top: 17px;border-top: 1px solid #ddd;box-sizing: border-box;font-size: 36px;color: #00295D;font-weight: 700;line-height: 150%;letter-spacing: -0.6px;}
+.historyWrap .textGroup .year:first-child{border-color: #00295D;}
+.historyWrap .textGroup .monthGroup{margin: 49px 0 82px;}
+.historyWrap .textGroup .monthGroup li{display: flex;flex-direction: row;flex-wrap: nowrap;align-items: flex-start;}
+.historyWrap .textGroup .monthGroup li span{width: 70px;font-size: 22px;color: #222;font-weight: 500;line-height: 33px;letter-spacing: -0.6px;}
+.historyWrap .textGroup .monthGroup li p{position: relative;width: calc(100% - 70px);padding-left: 11px;box-sizing: border-box;font-size: 18px;color: #666;font-weight: 400;line-height: 33px;letter-spacing: -0.6px;word-break: keep-all;}
+.historyWrap .textGroup .monthGroup li p:before{content: "";position: absolute;left: 0;top: 15px;width: 5px;height: 5px;border-radius: 100%;background: #00295D;box-sizing: border-box;}
+.historyWrap .imgGroup{position: relative;width: 46.667%;height: 980px;overflow: hidden;}
+.historyWrap .imgGroup p{height: 100%;}
+.historyWrap .imgGroup img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;transform: scale(1);}
+
+/* 협회소개 - 비전 */
+.visionWrap{display: flex;justify-content: flex-end;align-items: flex-start;flex-direction: row;flex-wrap: wrap;}
+.visionWrap .imgGroup{position: relative;width: calc(52% - 70px);}
+.visionWrap .textGroup{width: 48%;}
 
 @media screen and (max-width: 1499px){
 
@@ -101,10 +119,16 @@
     #subVisual .lnb > li:nth-child(3) > ul{border: 1px solid #00295D;}
     #subVisual .lnb > li > ul > li{box-sizing: border-box;}
     #subVisual .lnb > li > ul > li + li{margin-left: 0;border-top: 1px solid #DADADA;}
-    #subVisual .lnb > li > ul > li > a{position: relative;display: block;width: 100%;padding: 0 20px;box-sizing: border-box;font-size: 14px;color: #333;font-weight: 400;line-height: 350%;letter-spacing: -0.6px;transition: all 0.5s;}
+    #subVisual .lnb > li > ul > li > a{position: relative;display: block;width: 100%;padding: 0 10px 0 20px;box-sizing: border-box;font-size: 14px;color: #333;font-weight: 400;line-height: 350%;letter-spacing: -0.6px;transition: all 0.5s;}
     #subVisual .lnb > li:nth-child(2) > ul > li > a:hover, #subVisual .lnb > li:nth-child(2) > ul > li.on > a{background: #F5F5F5;color: #00295D;font-weight: 700;text-decoration: underline;}
     #subVisual .lnb > li:nth-child(3) > ul > li > a:hover, #subVisual .lnb > li:nth-child(3) > ul > li.on > a{background: #00295D;color: #fff;font-weight: 700;text-decoration: inherit;}
     .subContent{padding: 90px 0 150px;}
+
+    .executivesWrap ul li{width: calc(50% - 10px);margin-top: 20px;}
+
+    .historyWrap{margin-top: 30px;}
+    .historyWrap .textGroup{width: 100%;margin-top: 30px;order: 2;}
+    .historyWrap .imgGroup{width: 100%;height: 500px;order: 1;}
 }
 
 @media screen and (max-width: 767px){
@@ -144,6 +168,12 @@
     .greetingWrap .textGroup .historyList li{font-size: 14px;}
     .greetingWrap .textGroup .historyList li:before{top: 10px;}
 
+    .executivesWrap ul li{width: 100%;margin-top: 30px;}
+
+    .historyWrap .textGroup .year{padding-top: 15px;font-size: 26px;}
+    .historyWrap .textGroup .monthGroup{margin: 35px 0 50px;}
+    .historyWrap .textGroup .monthGroup li span{width: 40px;font-size: 18px;}
+    .historyWrap .textGroup .monthGroup li p{width: calc(100% - 40px);font-size: 15px;}
 }
 
 @keyframes scale{ 
