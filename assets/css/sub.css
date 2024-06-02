@@ -1,4 +1,4 @@
-#sub{min-height: 700px;}
+#sub{min-height: 700px;overflow: hidden;}
 
 #subVisual{position: relative;height: 600px;padding: 238px 0 0;box-sizing: border-box;text-align: center;z-index: 50;}
 #subVisual .visualbg{width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: -10;overflow: hidden;} 
@@ -79,9 +79,80 @@
 .historyWrap .imgGroup img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;transform: scale(1);}
 
 /* 협회소개 - 비전 */
-.visionWrap{display: flex;justify-content: flex-end;align-items: flex-start;flex-direction: row;flex-wrap: wrap;}
-.visionWrap .imgGroup{position: relative;width: calc(52% - 70px);}
-.visionWrap .textGroup{width: 48%;}
+.visionWrap{display: flex;justify-content: space-between;align-items: flex-start;flex-direction: row;flex-wrap: wrap;padding-top: 100px;padding-left: 70px;border-top: 1px solid #00295D;box-sizing: border-box;}
+.visionWrap .imgGroup{position: relative;width: 40%;}
+.visionWrap .imgGroup img{margin-top: 150px;}
+.visionWrap .textGroup{width: calc(54.196% - 50px);}
+.visionWrap .textGroup li{position: relative;padding: 30px 0 36px;padding-left: 130px;box-sizing: border-box;}
+.visionWrap .textGroup li:first-child{padding-top: 0;}
+.visionWrap .textGroup li + li{border-top: 1px solid #ddd;}
+.visionWrap .textGroup img{position: absolute;left: 0;top: 50%;transform: translateY(-50%); width: 100px;height: 100px;background: #FFF;border-radius: 100%;border: 1px solid #DDD;box-sizing: border-box;}
+.visionWrap .textGroup .num{font-size: 20px;color: #46A4C6;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;}
+.visionWrap .textGroup .title{font-size: 24px;color: #00295D;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
+.visionWrap .textGroup .text{margin-top: 5px;font-size: 18px;color: #666;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
+
+/* 협회소개 - 회원기관 및 협력기관 */
+.partnerWrap .subTextLg{padding-top: 90px;border-top: 1px solid #ddd;box-sizing: border-box;}
+.partnerWrap .subTextLg:first-child{border-color: #00295D;}
+.partnerList{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: flex-start;padding: 45px 0 90px;box-sizing: border-box;}
+.partnerList a{width: calc(25% - 25px);margin-top: 40px;margin-left: 33px;background: #fff;border: 1px solid #ddd;box-sizing: border-box;}
+.partnerList a:nth-child(4n+1){margin-left: 0;}
+.partnerList .img{width: 100%;height: 220px;display: flex;align-items: center;justify-content: center;}
+.partnerList .name{display: flex;align-items: center;justify-content: center;height: 100px;background: #F8F8F8;border-top: 1px solid #ddd;box-sizing: border-box;font-size: 24px;color: #222;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;text-align: center;}
+
+/* 협회소개 - 국제협력 목록 */
+.searchSort{display: flex;align-items: center;flex-direction: row;flex-wrap: wrap;justify-content: center;width: 100%;max-width: 1000px;padding: 16px 10px;margin: 0 auto;background: #F9F9F9;border: 1px solid #DDD;box-sizing: border-box;}
+.searchSort select{width: 100px;height: 44px;}
+.searchSort .searchInput{width: 200px;height: 44px;margin-left: 10px;border: 1px solid #DDD;box-sizing: border-box;}
+.searchSort .btnSearch{width: 86px;height: 44px;margin-left: 10px;background: #00295D;font-size: 14px;;color: #FFF;font-weight: 500;line-height: normal;text-align: center;}
+.photoboardList{margin-top: 50px;border-top: 1px solid #00295D;border-bottom: 1px solid #ddd;box-sizing: border-box;}
+.photoboardList li{display: flex;align-items: center;flex-direction: row;flex-wrap: wrap;justify-content: space-between;padding: 50px 0;box-sizing: border-box;}
+.photoboardList li + li{border-top: 1px solid #ddd;}
+.photoboardList li .img{position: relative;width: 47%;height: 250px;overflow: hidden;}
+.photoboardList li .img img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
+.photoboardList li .text{width: calc(53% - 70px);}
+.photoboardList li .text .label{font-size: 30px;color: #00295D;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;}
+.photoboardList li .text .title{margin-top: 9px;font-size: 20px;color: #222;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
+.photoboardList li .text a{display: flex;align-items: center;justify-content: center;width: 160px;height: 50px;margin-top: 45px;border-radius: 50px;border: 1px solid #00295D;box-sizing: border-box;color: #00295D;font-size: 16px;font-weight: 500;letter-spacing: -1px;text-align: center;transition: .3s;-webkit-transition: .3s;}
+.photoboardList li .text a:hover{background: #00295D;color: #fff;}
+
+/* paging */
+.paging {margin-top: 100px;text-align: center;font-size: 0;}
+.paging a, .paging strong {display: inline-block;width: 36px;height: 36px;line-height: 34px;margin: 0 3px;box-sizing: border-box;font-size: 14px;color: #666;font-weight: 500;vertical-align: middle;text-decoration: none;z-index: 10;}
+.paging strong {border: 1px solid #00295D;color: #00295D;font-weight: 700;}
+.paging #page_prev{margin: 0 9px 0 0;padding-left: 24px;background-position: left center;background-image: url(../images/sub/arrow_prev.png);}
+.paging #page_next{margin: 0 0 0 9px;padding-right: 24px;background-image: url(../images/sub/arrow_next.png);background-position: right center;}
+.paging #page_prev, .paging #page_next{display: inline-block;width: auto;background-repeat: no-repeat;box-sizing: border-box;font-size: 14px;color: #555;font-weight: 400;}
+
+/* 협회소개 - 국제협력 상세 */
+.boardView{border-top: 1px solid #00295D;box-sizing: border-box;}
+.boardViewHeader{padding: 50px;border-bottom: 1px solid #ddd;box-sizing: border-box;}
+.boardViewHeader .label{font-size: 30px;color: #00295D;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;text-align: center;}
+.boardViewHeader .title{margin-top: 10px;font-size: 20px;color: #222;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;text-align: center;word-break: keep-all;}
+.boardViewbody{padding: 50px;box-sizing: border-box;}
+.boardViewNav{border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;box-sizing: border-box;}
+.boardViewNav li{display: flex;align-items: center;justify-content: flex-start;flex-direction: row;flex-wrap: nowrap;}
+.boardViewNav li + li{border-top: 1px solid #ddd;}
+.boardViewNav li p{display: flex;align-items: center;justify-content: center;width: 200px;height: 60px;background: #F9F9F9;font-size: 16px;color: #666;font-weight: 500;vertical-align: middle;letter-spacing: -1px;}
+.boardViewNav li a{position: relative;width: calc(100% - 200px);padding-left: 40px;box-sizing: border-box;vertical-align: middle;font-size: 18px;color: #666;font-weight: 400;letter-spacing: -0.6px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.boardBtnGroup{display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: flex-end;margin-top: 100px;}
+.boardBtnGroup button, .boardBtnGroup a{display: inline-flex;justify-content: center;align-items: center;width: 160px;height: 50px;background: #fff;border: 1px solid #00295D;color: #00295D;box-sizing: border-box;font-size: 16px;font-weight: 500;letter-spacing: -1px;transition: .3s;-webkit-transition: .3s;}
+.boardBtnGroup button + button, .boardBtnGroup a + a{margin-left: 10px;}
+.boardBtnGroup button:hover, .boardBtnGroup a:hover{background: #00295D;border: 1px solid #00295D;color: #fff;}
+
+/* 협회소개 - 오시는 길 */
+.locationInfo{margin-top: 90px;}
+.locationHeader{display: flex;align-items: center;justify-content: space-between;flex-direction: row;flex-wrap: nowrap;}
+.locationHeader .mapLink{display: flex;}
+.locationHeader .mapLink a{display: flex;align-items: center;justify-content: center;width: 160px;height: 50px;border-radius: 50px;font-size: 16px;font-weight: 500;letter-spacing: -1px;text-align: center;}
+.locationHeader .mapLink a:nth-child(1){background: #57B04B;color: #FFF;}
+.locationHeader .mapLink a:nth-child(2){margin-left: 10px; background: #FEE500;color: #381C1E;}
+.locationBody{display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: flex-start;border-top: 1px solid #00295D;box-sizing: border-box;margin-top: 50px;}
+.locationBody li{display: flex;align-items: center;flex-direction: row;flex-wrap: nowrap;width: 50%;padding: 30px 0;border-bottom: 1px solid #ddd;box-sizing: border-box;}
+.locationBody li:nth-child(3){width: 100%;}
+.locationBody li img{margin-left: 5px;width: 75px;height: 75px;background: #FFF;border-radius: 75px;border: 1px solid #DDD;box-sizing: border-box;}
+.locationBody li strong{margin-left: 20px;font-size: 22px;color: #00295D;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;}
+.locationBody li p{margin-left: 40px;font-size: 18px;color: #666;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
 
 @media screen and (max-width: 1499px){
 
@@ -129,6 +200,21 @@
     .historyWrap{margin-top: 30px;}
     .historyWrap .textGroup{width: 100%;margin-top: 30px;order: 2;}
     .historyWrap .imgGroup{width: 100%;height: 500px;order: 1;}
+
+    .visionWrap{flex-direction: column;padding-top: 0;padding-left: 0;border-top: 0;}
+    .visionWrap .imgGroup{width: 100%;}
+    .visionWrap .imgGroup .subTextLg{text-align: center !important;}
+    .visionWrap .imgGroup img{margin-top: 30px;padding-top: 30px;border-top: 1px solid #00295D;box-sizing: border-box;}
+    .visionWrap .textGroup{width: 100%;margin-top: 45px;}
+
+    .partnerList a{width: calc(50% - 5px);margin-top: 20px;margin-left: 10px;}
+    .partnerList a:nth-child(2n+1){margin-left: 0;}
+
+    .photoboardList li .text{width: calc(53% - 40px);}
+    .photoboardList li .text .label{font-size: 22px;}
+    .photoboardList li .text .title{font-size: 16px;}
+
+    .locationBody li{width: 100%;}
 }
 
 @media screen and (max-width: 767px){
@@ -143,7 +229,7 @@
     #subVisual .visualtext p{font-size: 16px;line-height: 20px;}
     #subVisual .visualtext h2{margin-top: 10px;font-size: 40px;line-height: 40px;}
     .subContent{padding: 60px 0 100px;}
-    .subContent:before{top: 0;left: -20px;width: 259px;height: 360px;}
+    .subContent:before{top: 0;left: -20px;width: 310px;height: 360px;background-image: url(../images/sub/mark_k_m.png);}
     .subContent .subTitle{margin-bottom: 30px;}
     .subContent .subTitle:after{width: 30px;height: 4px;margin: 26px auto 0;}
     .subContent .subTitle h3{font-size: 32px;}
@@ -174,6 +260,57 @@
     .historyWrap .textGroup .monthGroup{margin: 35px 0 50px;}
     .historyWrap .textGroup .monthGroup li span{width: 40px;font-size: 18px;}
     .historyWrap .textGroup .monthGroup li p{width: calc(100% - 40px);font-size: 15px;}
+
+    .visionWrap .textGroup li{padding: 30px 0;}
+    .visionWrap .textGroup li:first-child{padding-top: 30px;}
+    .visionWrap .textGroup img{top: 30px;transform: translateY(0%);width: 60px;height: 60px;}
+    .visionWrap .textGroup .num{margin-top: 7px;padding-left: 72px;font-size: 14px;}
+    .visionWrap .textGroup .title{padding-left: 72px;font-size: 16px;}
+    .visionWrap .textGroup .text{margin-top: 25px;font-size: 14px;}
+
+    .partnerWrap .subTextLg{padding-top: 30px;}
+    .partnerList{padding: 10px 0 30px;}
+    .partnerList .img{height: 150px;padding: 0 10px;box-sizing: border-box;}
+    .partnerList .name{height: 50px;padding: 0 10px;box-sizing: border-box;font-size: 15px;}
+
+    .searchSort{padding: 12px 10px;}
+    .searchSort select{width: 30%;}
+    .searchSort .searchInput{width: calc(70% - 70px);margin-left: 5px;}
+    .searchSort .btnSearch{width: 60px;margin-left: 5px;}
+    .photoboardList{margin-top: 30px;}
+    .photoboardList li{flex-direction: column;padding: 30px 0;}
+    .photoboardList li .img{width: 100%;height: 200px;}
+    .photoboardList li .text{width: 100%;margin-top: 30px;}
+    .photoboardList li .text .title{margin-top: 2px;}
+    .photoboardList li .text a{width: 105px;height: 32px;margin-top: 25px;font-size: 12px;}
+    .paging{margin-top: 50px;}
+    .paging a, .paging strong{margin: 0 2px;}
+    .paging #page_prev{margin: 0 5px 0 0;padding-left: 20px;}
+    .paging #page_next{margin: 0 0 0 5px;padding-right: 20px;}
+
+    .boardViewHeader{padding: 30px 0;}
+    .boardViewHeader .label{font-size: 26px;}
+    .boardViewHeader .title{margin-top: 2px;font-size: 18px;}
+    .boardViewbody{padding: 30px 0;}
+    .boardViewNav li p{width: 97px;height: 50px;font-size: 14px;}
+    .boardViewNav li a{width: calc(100% - 97px);padding-left: 20px;font-size: 14px;}
+    .boardBtnGroup{margin-top: 30px;}
+    .boardBtnGroup button, .boardBtnGroup a{width: 75px;height: 36px;font-size: 14px;}
+    .boardBtnGroup button + button, .boardBtnGroup a + a{margin-left: 5px;}
+
+    .locationMap .wrap_map{height: 320px !important;}
+    .locationInfo{margin-top: 30px;}
+    .locationHeader{flex-direction: column;}
+    .locationHeader img{width: 120px;}
+    .locationHeader .mapLink{margin-top: 30px;}
+    .locationHeader .mapLink a{width: 130px;height: 40px;font-size: 13px;}
+    .locationHeader .mapLink a:nth-child(2){margin-left: 5px;}
+    .locationBody{margin-top: 20px;}
+    .locationBody li{position: relative;align-items: flex-start;flex-direction: column;}
+    .locationBody li img{position: absolute;left: 0;top: 50%;transform: translateY(-50%);width: 60px;height: 60px;margin-left: 0;}
+    .locationBody li strong{margin-left: 0;padding-left: 80px;font-size: 16px;}
+    .locationBody li p{margin-left: 0;padding-left: 80px;font-size: 14px;}
+
 }
 
 @keyframes scale{ 
