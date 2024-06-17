@@ -154,6 +154,35 @@
 .locationBody li strong{margin-left: 20px;font-size: 22px;color: #00295D;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;}
 .locationBody li p{margin-left: 40px;font-size: 18px;color: #666;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
 
+/* 세미나,포럼 */
+.horizontalboardList{margin-top: 50px;border-top: 1px solid #00295D;border-bottom: 1px solid #ddd;box-sizing: border-box;}
+.horizontalboardList li a{position: relative;display: flex;align-items: center;flex-direction: row;flex-wrap: wrap;justify-content: space-between;padding: 50px 0;box-sizing: border-box;}
+.horizontalboardList li + li{border-top: 1px solid #ddd;}
+.horizontalboardList li .imgArea{position: relative;width: 26.5%;height: 250px;overflow: hidden;}
+.horizontalboardList li .imgArea img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
+.horizontalboardList li .textArea{width: calc(73.5% - 300px);}
+.horizontalboardList li .textArea .title{font-size: 25px;color: #222;font-weight: 700;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
+.horizontalboardList li .textArea .text{margin-top: 20px;font-size: 18px;color: #666;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;white-space: normal;height: 3em;text-align: left;word-wrap: break-word;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.horizontalboardList li .textArea .date{margin-top: 50px;font-size: 16px;color: #999;font-weight: 400;line-height: normal;letter-spacing: -0.6px;}
+.horizontalboardList li .btnArea{display: flex;align-items: center;justify-content: center;width: 160px;height: 50px;border-radius: 50px;border: 1px solid #00295D;box-sizing: border-box;color: #00295D;font-size: 16px;font-weight: 500;letter-spacing: -1px;text-align: center;transition: .3s;-webkit-transition: .3s;}
+.horizontalboardList li a:hover .textArea .title{color: #00295D;text-decoration: underline;}
+.horizontalboardList li a:hover .btnArea{background: #00295D;color: #fff;}
+
+.boardHeader{display: flex;align-items: center;justify-content: space-between;margin: 50px 0 20px;}
+.boardHeader p{font-size: 15px;color: #333;font-weight: 400;line-height: normal;letter-spacing: -0.6px;}
+.boardHeader b{color: #00295D;font-weight: 700;}
+.tableboardList {width: 100%;border-top: 2px solid #00295D;border-spacing: 0;border-collapse: separate;font-size: 15px;line-height: 24px;}
+.tableboardList thead tr:last-child > * {border-bottom: 1px solid #00295D;}
+.tableboardList th, .tableboardList td {height: 50px;padding: 15px 10px;text-align: center;box-sizing: border-box;}
+.tableboardList th {position: relative;background: #F9F9F9;color: #222;font-weight: 700;}
+.tableboardList td {border-bottom: 1px solid #DDDDDD;color: #666;font-weight: 400;}
+.tableboardList td .noticeLabel{padding: 5px 14px; border-radius: 50px;background: #00295D;box-sizing: border-box;font-size: 14px;color: #FFF;font-weight: 500;line-height: normal;letter-spacing: -0.6px;text-align: center;}
+.tableboardList td.td_subject{text-align: left;}
+.tableboardList td.td_subject a:hover{color: #00295D;text-decoration-line: underline;}
+.tableboardList td .newLabel{display: inline-block;width: 18px;height: 18px;background: #00295D;border-radius: 100%;font-size: 12px;color: #FFF;font-weight: 500;line-height: normal;text-align: center;}
+.tableboardList td .fileLabel{display: inline-block;width: 16px;height: 21px;background-image: url(../images/sub/icon_file.svg);background-position: center;background-repeat: no-repeat;overflow: hidden;text-indent: -9999px;white-space: nowrap;vertical-align: middle;}
+
+
 @media screen and (max-width: 1499px){
 
     #subVisual{height: 500px;padding: 180px 0 0;}
@@ -215,6 +244,13 @@
     .photoboardList li .text .title{font-size: 16px;}
 
     .locationBody li{width: 100%;}
+
+    .horizontalboardList li a{padding: 30px 0;}
+    .horizontalboardList li .imgArea{width: 35%;}
+    .horizontalboardList li .textArea{width: calc(65% - 40px);}
+    .horizontalboardList li .textArea .title{font-size: 22px;}
+    .horizontalboardList li .textArea .text{font-size: 16px;}
+    .horizontalboardList li .btnArea{position: absolute;right: 0;bottom: 30px;}
 }
 
 @media screen and (max-width: 767px){
@@ -311,6 +347,26 @@
     .locationBody li strong{margin-left: 0;padding-left: 80px;font-size: 16px;}
     .locationBody li p{margin-left: 0;padding-left: 80px;font-size: 14px;}
 
+    .horizontalboardList li a{align-items: flex-start;flex-direction: column;}
+    .horizontalboardList li .imgArea{width: 100%;height: 200px;}
+    .horizontalboardList li .textArea{width: 100%;margin-top: 30px;}
+    .horizontalboardList li .textArea .title{font-size: 19px;}
+    .horizontalboardList li .textArea .text{margin-top: 12px;font-size: 15px;}
+    .horizontalboardList li .textArea .date{margin: 20px 0 10px;font-size: 14px;}
+    .horizontalboardList li .btnArea{width: 105px;height: 32px;margin-top: 25px;font-size: 12px;}
+
+    .boardHeader{margin: 30px 0 15px;}
+    .boardHeader p{font-size: 13px;}
+    .tableboardList colgroup,
+    .tableboardList thead{display: none;}
+    .tableboardList .mNone{display: none;}
+    .tableboardList tr{position: relative;display: block;padding: 40px 0 20px;border-bottom: 1px solid #DDDDDD;box-sizing: border-box;}
+    .tableboardList td{display: inline-block;height: auto;padding: 0;border-bottom: 0;font-size: 13px;color: #999;}
+    .tableboardList td.tdTop{position: absolute;top: 20px;left: 0;}
+    .tableboardList td.td_subject{display: block;}
+    .tableboardList td.td_subject a{font-size: 16px;color: #666;}
+    .tableboardList td.hit {line-height: 1;border-left: 1px solid #ddd;margin: 0 10px;padding-left: 10px;}
+    .tableboardList td.hit:before{content: "조회수";}
 }
 
 @keyframes scale{ 
