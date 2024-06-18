@@ -126,9 +126,19 @@
 
 /* 협회소개 - 국제협력 상세 */
 .boardView{border-top: 1px solid #00295D;box-sizing: border-box;}
-.boardViewHeader{padding: 50px;border-bottom: 1px solid #ddd;box-sizing: border-box;}
+.boardViewHeader{padding: 50px;border-bottom: 1px solid #ddd;box-sizing: border-box;text-align: center;}
+.boardViewHeader .team{font-size: 18px;color: #999;font-weight: 400;line-height: normal;letter-spacing: -0.6px;text-align: center;}
 .boardViewHeader .label{font-size: 30px;color: #00295D;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;text-align: center;}
 .boardViewHeader .title{margin-top: 10px;font-size: 20px;color: #222;font-weight: 500;line-height: 150%;letter-spacing: -0.6px;text-align: center;word-break: keep-all;}
+.boardViewHeader .date, .boardViewHeader .hits{font-size: 18px;color: #999;font-weight: 400;line-height: normal;letter-spacing: -0.6px;text-align: center;}
+.boardViewHeader .hits:before{content: "ㅣ";font-size: 18px;color: #999;font-weight: 400;line-height: normal;letter-spacing: -0.6px;}
+.fileWrap{display: flex;border-bottom: 1px solid #ddd;box-sizing: border-box;}
+.fileWrap strong{display: flex;justify-content: center;align-items: center;width: 200px;padding: 15px 0;background: #F9F9F9;border-right: 1px solid #ddd;box-sizing: border-box;font-size: 16px;color: #666;font-weight: 500;line-height: 35px;letter-spacing: -1px;}
+.fileWrap ul{width: calc(100% - 200px);}
+.fileWrap ul li{display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: space-between;width: 100%;padding: 15px 30px;box-sizing: border-box;}
+.fileWrap ul li + li{border-top: 1px solid #ddd;}
+.fileWrap ul li p{padding-left: 26px;background-image: url(../images/sub/icon_file.svg);background-position: left center;background-repeat: no-repeat;font-size: 18px;color: #666;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;}
+.fileWrap ul li a{padding: 10px 20px;border: 1px solid #00295D;box-sizing: border-box;font-size: 13px;color: #00295D;font-weight: 500;line-height: 20px;letter-spacing: -1px;text-align: center;}
 .boardViewbody{padding: 50px;box-sizing: border-box;}
 .boardViewNav{border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;box-sizing: border-box;}
 .boardViewNav li{display: flex;align-items: center;justify-content: flex-start;flex-direction: row;flex-wrap: nowrap;}
@@ -155,6 +165,14 @@
 .locationBody li p{margin-left: 40px;font-size: 18px;color: #666;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
 
 /* 세미나,포럼 */
+.lawLink{display: flex;flex-direction: row;flex-wrap: nowrap;margin-top: 100px;}
+.lawLink a{display: flex;justify-content: center;align-items: center;flex-direction: column;flex-wrap: nowrap;flex: 1;height: 120px;padding: 0 10px;background-color: #FFF;border: 1px solid #46A4C6;border-radius: 15px;box-sizing: border-box;text-align: center;-webkit-transition: .3s;transition: .3s;}
+.lawLink a + a{margin-left: 30px;}
+.lawLink .title{font-size: 18px;color: #00295D;font-weight: 700;line-height: 140%;letter-spacing: -1px;word-break: keep-all;}
+.lawLink .btn{padding: 2px 31px 5px 0;margin-top: 8px;background-image: url(../images/sub/icon_more.svg);background-position: right center;background-repeat: no-repeat;font-size: 15px;color: #666;font-weight: 500;line-height: normal;letter-spacing: -1px;}
+.lawLink a:hover{background-color: #00295D;border-color: #00295D;}
+.lawLink a:hover .title{color: #fff;}
+.lawLink a:hover .btn{color: #aaa;}
 .horizontalboardList{margin-top: 50px;border-top: 1px solid #00295D;border-bottom: 1px solid #ddd;box-sizing: border-box;}
 .horizontalboardList li a{position: relative;display: flex;align-items: center;flex-direction: row;flex-wrap: wrap;justify-content: space-between;padding: 50px 0;box-sizing: border-box;}
 .horizontalboardList li + li{border-top: 1px solid #ddd;}
@@ -181,6 +199,46 @@
 .tableboardList td.td_subject a:hover{color: #00295D;text-decoration-line: underline;}
 .tableboardList td .newLabel{display: inline-block;width: 18px;height: 18px;background: #00295D;border-radius: 100%;font-size: 12px;color: #FFF;font-weight: 500;line-height: normal;text-align: center;}
 .tableboardList td .fileLabel{display: inline-block;width: 16px;height: 21px;background-image: url(../images/sub/icon_file.svg);background-position: center;background-repeat: no-repeat;overflow: hidden;text-indent: -9999px;white-space: nowrap;vertical-align: middle;}
+
+.galleryboardList{display: flex;flex-direction: row;flex-wrap: wrap;margin-top: 50px;padding: 50px 0;border-top: 1px solid #00295D;border-bottom: 1px solid #ddd;box-sizing: border-box;}
+.galleryboardList li{width: calc(33.3% - 20px);margin-left: 30px;margin-top: 50px;}
+.galleryboardList li:nth-child(3n+1){margin-left: 0;}
+.galleryboardList li:nth-child(-n+3){margin-top: 0;}
+.galleryboardList li a{position: relative;box-sizing: border-box;}
+.galleryboardList li .imgArea{position: relative;width: 100%;height: 315px;overflow: hidden;}
+.galleryboardList li .imgArea img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
+.galleryboardList li .textArea{padding: 37px 30px 40px;background: #F8F8F8;border: 1px solid #ddd;box-sizing: border-box;}
+.galleryboardList li .textArea .title{font-size: 24px;color: #222;font-weight: 700;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;}
+.galleryboardList li .textArea .text{margin: 18px 0;font-size: 18px;color: #666;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;word-break: keep-all;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;white-space: normal;height: 3em;text-align: left;word-wrap: break-word;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.galleryboardList li .textArea .date{font-size: 16px;color: #999;font-weight: 400;line-height: normal;letter-spacing: -0.6px;}
+.galleryboardList li .textArea .user{font-size: 16px;color: #999;font-weight: 400;line-height: normal;letter-spacing: -0.6px;}
+.galleryboardList li .textArea .user:before{content: "ㅣ";font-size: 16px;color: #999;font-weight: 400;line-height: normal;letter-spacing: -0.6px;}
+.galleryboardList li a:hover .textArea{background: #fff;}
+.galleryboardList li a:hover .textArea .title{color: #00295D;text-decoration: underline;}
+
+.tableboardForm {width: 100%;margin-bottom: 50px;border-top: 1px solid #00295D;border-bottom: 1px solid #DDDDDD;border-spacing: 0;border-collapse: separate;box-sizing: border-box;}
+.tableboardForm th, .tableboardForm td {height: 60px;padding: 8px 20px;box-sizing: border-box;}
+.tableboardForm th {position: relative;background: #F9F9F9;border-top: 1px solid #DDDDDD;font-size: 16px;color: #666;font-weight: 500;text-align: center;}
+.tableboardForm td {border-top: 1px solid #DDDDDD;font-size: 15px;color: #666;font-weight: 400;text-align: left;}
+.tableboardForm td input{font-size: 15px;color: #666;font-weight: 400;text-align: left;}
+.tableboardForm td select{font-size: 15px;color: #666;font-weight: 400;text-align: left;}
+.tableboardForm .telGroup{display: flex;align-items: center;justify-content: space-between;flex-direction: row;flex-wrap: nowrap;}
+.tableboardForm .telGroup li{width: calc(33.3% - 10px);}
+.tableboardForm .telGroup li.bar{width: 15px;text-align: center;}
+.tableboardForm .halfGroup{display: flex;align-items: center;justify-content: space-between;flex-direction: row;flex-wrap: nowrap;}
+.tableboardForm .halfGroup li{width: calc(50% - 5px);}
+.tableboardForm textarea{height: 280px;}
+.consentWrap{border-bottom: 1px solid #ddd;box-sizing: border-box;}
+.consentWrap .consentText{padding: 30px;border: 1px solid #E2E2E2;border-radius: 5px;box-sizing: border-box;}
+.consentWrap .consentText strong{font-size: 15px;color: #222;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;}
+.consentWrap .consentText ul{margin-top: 10px;}
+.consentWrap .consentText ul li{position: relative;padding-left: 8px;font-size: 15px;color: #777;font-weight: 400;line-height: 150%;letter-spacing: -0.6px;}
+.consentWrap .consentText ul li:before{content: "";position: absolute;top: 10px;left: 0;width: 3px;height: 3px;background: #00295D;border-radius: 100%;box-sizing: border-box;}
+.consentWrap .consentCheck{position: relative;padding-left: 29px;margin: 20px 0;}
+.consentWrap .consentCheck input{position: absolute;top: 3px;left: 0;width: 20px;height: 20px;border: none;-webkit-appearance: none;-moz-appearance: none;appearance: none;outline: 0;text-decoration: none;cursor: pointer;-webkit-text-size-adjust: none;}
+.consentWrap .consentCheck label:before{content: "";position: absolute;top: 3px;left: 0;width: 20px;height: 20px;background-color: #fff;background-image: url(../images/icon_check_gray.svg);background-position: center;background-repeat: no-repeat;border: 1px solid #BBBBBB;border-radius: 3px;box-sizing: border-box;transition: .3s;-webkit-transition: .3s;}
+.consentWrap .consentCheck label{display: inline-block;font-size: 14px;color: #777;font-weight: 400;line-height: normal;letter-spacing: -0.6px;cursor: pointer;}
+.consentWrap .consentCheck input:checked + label:before{background-color: #00295D;background-image: url(../images/icon_check_white.svg);border-color: #00295D;}
 
 
 @media screen and (max-width: 1499px){
@@ -245,12 +303,20 @@
 
     .locationBody li{width: 100%;}
 
+    .lawLink{margin-top: 50px;}
     .horizontalboardList li a{padding: 30px 0;}
     .horizontalboardList li .imgArea{width: 35%;}
     .horizontalboardList li .textArea{width: calc(65% - 40px);}
     .horizontalboardList li .textArea .title{font-size: 22px;}
     .horizontalboardList li .textArea .text{font-size: 16px;}
     .horizontalboardList li .btnArea{position: absolute;right: 0;bottom: 30px;}
+
+    .galleryboardList li{width: calc(50% - 10px);margin-left: 20px;margin-top: 20px;}
+    .galleryboardList li:nth-child(3n+1){margin-left: 20px;}
+    .galleryboardList li:nth-child(-n+3){margin-top: 20px;}
+    .galleryboardList li:nth-child(2n+1){margin-left: 0;}
+    .galleryboardList li:nth-child(-n+2){margin-top: 0;}
+    .galleryboardList li .textArea{padding: 20px;}
 }
 
 @media screen and (max-width: 767px){
@@ -325,8 +391,20 @@
     .paging #page_next{margin: 0 0 0 5px;padding-right: 20px;}
 
     .boardViewHeader{padding: 30px 0;}
+    .boardViewHeader .team{font-size: 14px;}
     .boardViewHeader .label{font-size: 26px;}
     .boardViewHeader .title{margin-top: 2px;font-size: 18px;}
+    .boardViewHeader .date, .boardViewHeader .hits{font-size: 13px;}
+    .boardViewHeader .hits:before{font-size: 13px;}
+
+    .fileWrap{flex-direction: column;}
+    .fileWrap strong{width: 100%;padding: 7px 0;background: #F9F9F9;border: 1px solid #ddd;border-top: 0;font-size: 14px;}
+    .fileWrap ul{width: 100%;}
+    .fileWrap ul li{padding: 5px 10px;}
+    .fileWrap ul li + li{border-top: 1px solid #ddd;}
+    .fileWrap ul li p{font-size: 14px;}
+    .fileWrap ul li a{padding: 3px 5px;font-size: 11px;}
+
     .boardViewbody{padding: 30px 0;}
     .boardViewNav li p{width: 97px;height: 50px;font-size: 14px;}
     .boardViewNav li a{width: calc(100% - 97px);padding-left: 20px;font-size: 14px;}
@@ -347,6 +425,11 @@
     .locationBody li strong{margin-left: 0;padding-left: 80px;font-size: 16px;}
     .locationBody li p{margin-left: 0;padding-left: 80px;font-size: 14px;}
 
+    .lawLink{flex-direction: column;margin-top: 30px;}
+    .lawLink a{height: auto;padding: 15px 10px;border-radius: 10px;}
+    .lawLink a + a{margin-left: 0;margin-top: 10px;}
+    .lawLink .title{font-size: 16px;}
+    .lawLink .btn{font-size: 13px;}
     .horizontalboardList li a{align-items: flex-start;flex-direction: column;}
     .horizontalboardList li .imgArea{width: 100%;height: 200px;}
     .horizontalboardList li .textArea{width: 100%;margin-top: 30px;}
@@ -365,8 +448,32 @@
     .tableboardList td.tdTop{position: absolute;top: 20px;left: 0;}
     .tableboardList td.td_subject{display: block;}
     .tableboardList td.td_subject a{font-size: 16px;color: #666;}
-    .tableboardList td.hit {line-height: 1;border-left: 1px solid #ddd;margin: 0 10px;padding-left: 10px;}
-    .tableboardList td.hit:before{content: "조회수";}
+    .tableboardList td.hits {line-height: 1;border-left: 1px solid #ddd;margin: 0 10px;padding-left: 10px;}
+    .tableboardList td.hits:before{content: "조회수";}
+
+    .galleryboardList{margin-top: 30px;padding: 30px 0;}
+    .galleryboardList li{width: 100%;margin-left: 0 !important;margin-top: 20px !important;}
+    .galleryboardList li:first-child{margin-top: 0;}
+    .galleryboardList li .imgArea{height: 220px;}
+    .galleryboardList li .textArea .title{font-size: 19px;}
+    .galleryboardList li .textArea .text{margin: 18px 0;font-size: 15px;}
+    .galleryboardList li .textArea .date, .galleryboardList li .textArea .user, .galleryboardList li .textArea .user::before{font-size: 14px;}
+
+    .tableboardForm{margin-bottom: 20px;}
+    .tableboardForm colgroup,
+    .tableboardForm thead{display: none;}
+    .tableboardForm tr{position: relative;display: block;}
+    .tableboardForm th, .tableboardForm td{display: block;height: auto;}
+    .tableboardForm th{padding: 0;border: 1px solid #DDDDDD;line-height: 50px;font-size: 14px;}
+    .tableboardForm td{padding: 10px 0;border-top: 0;font-size: 13px;}
+    .tableboardForm td input{font-size: 13px;}
+    .tableboardForm td select{font-size: 13px;}
+    .tableboardForm textarea{height: 200px;font-size: 13px;}
+    .consentWrap .consentText{padding: 20px;}
+    .consentWrap .consentText strong{font-size: 14px;}
+    .consentWrap .consentText ul li{font-size: 13px;}
+    .consentWrap .consentText ul li:before{top: 8px;}
+
 }
 
 @keyframes scale{ 
